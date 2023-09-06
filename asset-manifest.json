@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4f4b8679.css",
+    "main.js": "/static/js/main.5b55d590.js",
+    "static/media/tyler.png": "/static/media/tyler.e0f278acdf21487bfe37.png",
+    "static/media/memento-img.png": "/static/media/memento-img.2432d805e8532f2ad1a0.png",
+    "static/media/hisaishi.png": "/static/media/hisaishi.7262d79aefd3c004bb7c.png",
+    "static/media/yuval.png": "/static/media/yuval.dd3e3c8ae91713fea45b.png",
+    "static/media/chamath.png": "/static/media/chamath.0293c850920dccdf6396.png",
+    "static/media/misc-img.png": "/static/media/misc-img.86e07d280b0d3a7e3a59.png",
+    "static/media/deathsdoor.png": "/static/media/deathsdoor.0c82c9808f900e0afecb.png",
+    "static/media/tadao.png": "/static/media/tadao.da23924e3fab9a57e950.png",
+    "static/media/blender-img.png": "/static/media/blender-img.24af9512b7f68e277a42.png",
+    "static/media/chihiro.png": "/static/media/chihiro.7647789d15748ab15fe3.png",
+    "static/media/joji.png": "/static/media/joji.9e8abb6562b7b27f77bf.png",
+    "static/media/ndmca-img.png": "/static/media/ndmca-img.a975523caf1304173d9e.png",
+    "static/media/lp-img.png": "/static/media/lp-img.60928b08efdc20aa1b9d.png",
+    "static/media/asta-img.png": "/static/media/asta-img.9ab2f476a150453f4209.png",
+    "static/media/webpoint-img.png": "/static/media/webpoint-img.11aac8f82b8936136e8a.png",
+    "index.html": "/index.html",
+    "main.4f4b8679.css.map": "/static/css/main.4f4b8679.css.map",
+    "main.5b55d590.js.map": "/static/js/main.5b55d590.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f4b8679.css",
+    "static/js/main.5b55d590.js"
+  ]
+}
