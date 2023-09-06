@@ -1,0 +1,18 @@
+.navContainer {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navLink {
+    margin-left: 20px;
+}
