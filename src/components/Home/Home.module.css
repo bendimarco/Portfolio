@@ -196,6 +196,27 @@
     overflow: hidden;
 }
 
+.workIndicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-tOp: 50px;
+    margin-left: 20px;
+    background: #22E29D;
+    box-shadow: 0px 0px 6px #22E29D55;
+    /* animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+@keyframes blink {
+    from {background: #22E29D;
+        box-shadow: 0px 0px 6px #22E29D77;}
+    to {background: #22E29D77;
+        box-shadow: 0px 0px 6px #22E29D00;}
+}
+
 /* Work Imgs */
 
 .mementoImgContainer {
@@ -266,7 +287,6 @@
 
 .yuvalImgContainer {
     width: 60%;
-    margin-right: 8px;
 }
 
 .yuvalImg {
@@ -274,23 +294,24 @@
 }
 
 .threeSideConatiner {
-    width: calc(40% - 20px);
+    width: calc(40% - 0px);
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
 }
 
 .chamathImgContainer {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .chamathImg, .jojiImg {
    width: 100%;
-   object-fit: contain;
 }
 
 .ddImg {
     width: 100%;
+    object-fit: contain;
 }
 
 .hisaishiImg {
@@ -326,6 +347,77 @@
 .aboutTextContainer {
     margin: 180px 0px;
     margin-left: 20%;
+}
+
+@media (max-width: 1250px) {
+
+    .introContainer {
+        margin-left: 10%;
+    }
+
+    .aboutTextContainer {
+        margin-left: 10%;
+    }
+    
+    .helloText {
+        font-size: 32px;
+        font-weight: 100;
+        margin-top: 200px;
+        width: 645px;
+    }
+    
+    .studentText, .aboutText {
+        font-size: 32px;
+        width: 675px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .introContainer {
+        margin-left: 20px;
+    }
+
+    .aboutTextContainer {
+        margin-left: 20px;
+    }
+    
+    .helloText {
+        font-size: 24px;
+        font-weight: 100;
+        margin-top: 120px;
+        width: 80%;
+    }
+    
+    .studentText, .aboutText {
+        font-size: 24px;
+        width: 90%;
+    }
+    .interestsContainer {
+        margin-top: -80px;
+    }   
+    .aboutTextContainer {
+        margin-top: 80px;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    
+    .helloText {
+        font-size: 18px;
+        font-weight: 100;
+        margin-top: 100px;
+        width: 80%;
+    }
+    
+    .studentText, .aboutText {
+        font-size: 18px;
+        width: 90%;
+    }
+    .interestsContainer {
+        margin-top: -100px;
+    }   
 }
 
 

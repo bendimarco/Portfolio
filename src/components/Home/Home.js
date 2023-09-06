@@ -168,7 +168,7 @@ const Home = ({ theme }) => {
         </div>
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.aboutText}>
-                Get in touch at <a span style={{textDecoration: 'underline', cursor: 'pointer'}}>bencdimarco@gmail.com</a>
+                Get in touch at <a href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'underline', cursor: 'pointer', color: '#000'}}>bencdimarco@gmail.com</a>
           </h2>
           <h2 className={styles.aboutText}>
             (Open for work)
