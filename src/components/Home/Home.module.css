@@ -79,7 +79,7 @@
     font-size: 12px;
     margin-bottom: -4px;
     margin: 16px 16px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
     margin-top: 8px;
     color: #ffffff;
     /* font-style: italic; */
@@ -184,6 +184,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-right: 10px;
 }
 
 .threeContainer {
@@ -286,7 +287,7 @@
 /* About Imgs */
 
 .yuvalImgContainer {
-    width: 60%;
+    width: 70%;
 }
 
 .yuvalImg {
@@ -294,7 +295,7 @@
 }
 
 .threeSideConatiner {
-    width: calc(40% - 0px);
+    width: calc(45% - 0px);
     margin-left: 10px;
     display: flex;
     flex-direction: column;
@@ -418,6 +419,22 @@
     .interestsContainer {
         margin-top: -100px;
     }   
+    .cursor {
+        left: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .yuvalImgContainer {
+        width: 100%;
+    }
+    
+    .threeSideConatiner {
+        width: calc(40% - 0px);
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
