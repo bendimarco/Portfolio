@@ -175,6 +175,10 @@
     margin-top: -5px;
 }
 
+.empty {
+    margin-top: 30px;
+}
+
 @keyframes pulse {
     from {
         opacity: 1;

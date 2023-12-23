@@ -139,7 +139,7 @@ const Home = () => {
         <div className={styles.spotifyDiv}>
           {currentTrack
           ? <div className={styles.spotifyCircle}></div>
-          : <></>
+          : <div className={styles.empty}></div>
           }
           {currentTrack 
           ? <p className={styles.spotifyText}>{currentTrack.name}, by {currentTrack.artist["#text"]}</p>
