@@ -48,6 +48,7 @@ let interests = [
 const Home = () => {
 
   const [currentTrack, setCurrentTrack] = useState(null);
+  const [lastTrack, setLastTrack] = useState(null);
   const apiKey = process.env.REACT_APP_API_KEY; 
   const user = process.env.REACT_APP_USER;
 
@@ -57,9 +58,12 @@ const Home = () => {
               const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${user}&api_key=${apiKey}&format=json&limit=1`);
               const data = await response.json();
               const track = data.recenttracks.track[0];
-
+              
+              setLastTrack(track);
               if (track["@attr"] && track["@attr"].nowplaying) {
                   setCurrentTrack(track);
+              } else {
+                setCurrentTrack(null);
               }
           } catch (error) {
               console.error('Error fetching data from Last.fm:', error);
@@ -133,13 +137,13 @@ const Home = () => {
       </div>
       <div className={styles.introContainer}>
         <div className={styles.spotifyDiv}>
-          {currentTrack 
+          {currentTrack
           ? <div className={styles.spotifyCircle}></div>
-          : <div className={styles.spotifyCircle}></div>
+          : <></>
           }
           {currentTrack 
           ? <p className={styles.spotifyText}>{currentTrack.name}, by {currentTrack.artist["#text"]}</p>
-          : <p className={styles.spotifyText}>-</p>
+          : <></>
           }
         </div>
         <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer specializing in visual design.</h1>
@@ -226,7 +230,7 @@ const Home = () => {
         </div>
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
-                Get in touch at <a href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'underline', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>
+                Get in touch, <a href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'underline', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>
           </h2>
           <h2 className={styles.aboutText}>
             (Open for work)
