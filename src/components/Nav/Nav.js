@@ -1,16 +1,15 @@
 import React from 'react'
 import styles from "./Nav.module.css";
+import pfp from "./pfp.png"
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Nav ({ theme }) {
 
     return (
         <div className={styles.navContainer}>
-            <p>bendimar.co</p>
-            <ul className={styles.navLinks}>
-                <li className={styles.navLink}>work</li>
-                <li className={styles.navLink}>play</li>
-                <li className={styles.navLink}>about</li>
-            </ul>
+            <Link exact to="/">
+                <img className={styles.pfpImg} src={pfp}></img>
+            </Link>
         </div>
     )
 }
