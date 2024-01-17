@@ -40,7 +40,7 @@ const Memento = () => {
             </p>
             <img className={styles.csImg} src={Hallo}></img>
             <h6 class={styles.sectionHeader}>Kiki's Bakery (WIP)</h6>
-            <p className={styles.overviewText}>Inspired by the below fan art of the bakery from Kiki's Delivery Service by Studio Ghbili, I wanted to recreate this scene in Belnder!
+            <p className={styles.overviewText}>Inspired by the below fan art of the bakery from Kiki's Delivery Service by Studio Ghbili, I wanted to recreate this scene in Blender!
             Sadly, due to my potato laptop, it has been very tedious to work on and render. 🥲</p>
             <img className={styles.csImg} src={Kiki}></img>
             <h6 class={styles.sectionHeader}>Tina Kitten Vandal Skin (WIP)</h6>
