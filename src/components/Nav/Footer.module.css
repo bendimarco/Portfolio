@@ -1,0 +1,41 @@
+.container {
+    width: 100vw;
+    height: auto;
+    background: #161620ee;
+    font-size: 12px;
+    font-weight: 300;
+    color: #525264;
+    margin-top: 0px;
+    margin-bottom: -16px;
+    margin-left: -16px;
+    padding-bottom: 40px;
+}
+
+.content {
+    width: 70vw;
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding-top: 60px;
+}
+
+.contentElement {
+    margin-right: 32px;
+    margin-top: 8px;
+    width: 32vw;
+    height: 20vw;
+    background: red;
+}
+
+.contentElement:hover {
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+
+.endTxt {
+    width: 300px;
+    margin-bottom: 16px;
+    color: white;
+    font-size: 16px;
+}

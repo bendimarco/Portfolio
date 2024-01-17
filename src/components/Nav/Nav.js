@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./Nav.module.css";
-import pfp from "./pfp.png"
+import pfp from "./home.svg"
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Nav ({ theme }) {
@@ -8,7 +8,7 @@ export default function Nav ({ theme }) {
     return (
         <div className={styles.navContainer}>
             <Link exact to="/">
-                <img className={styles.pfpImg} src={pfp}></img>
+            <svg className={styles.homeIcon} fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"/></svg>
             </Link>
         </div>
     )

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+.body {
+    margin: 0;
+    padding: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+.bannerImg {
+    max-width: 1600px;
+    width: 100%;
+    border-radius: 4px;
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.textContainer {
+    max-width: 1600px;
+    width: 70vw;
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -160px;
+    color: #313131;
+    
+}
+
+.title {
+    margin-bottom: 0;
+    /* letter-spacing: -0.4rem; */
+    font-size: 128px;
+    font-size: min(9vw, 128px);
+    font-weight: 700;
+}
+
+.attrLabels {
+    margin-top: 16px;
+    margin-bottom: 0;
+    display: flex;
+    /* background: red; */
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.attr {
+    margin-right: 32px;
+}
+
+.attrLabel {
+    margin-bottom: 8px;
+}
+
+
+.attrT {
+    margin-top: 0px;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+.divider {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    height: 1px;
+    width: 100%;
+    background: #909090;
+}
+
+.overviewText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6e6e6e;
+    max-width: 800px;
+    line-height: 1.4rem;
+    margin-bottom: 36px;
+}
+
+.overviewTextb {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6e6e6e;
+    max-width: 800px;
+    line-height: 1.4rem;
+    margin-bottom: 36px;
+    border: none;
+    border-left: 4px solid #6367EB;
+    padding-left: 16px;
+}
+
+
+.sectionHeader {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -4px;
+}
+
+.sectionHeader {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: -4px;
+}
+
+.csImg {
+    width: 100%;
+    border-radius: 4px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.bImg {
+    width: 100%;
+    border-radius: 4px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.bImg:hover {
+   transform: scale(1.02);
+   transition: 0.2s;
+}
+
+.csImgwt {
+    width: 100%;
+    border-radius: 4px;
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.imgSubtext {
+    margin-top: -18px;
+    margin-bottom: 36px;
+    font-size: 10px;
+    color: #5D6B81ff;
+}
+
+.detailViewContainer {
+    position: absolue;
+}
+
+.detailView {
+    z-index: 2;
+    background: #00000088;
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+}
+
+.footerText {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 48px;
+    margin-top: 48px;
+    width: 380px;
+    font-weight: 300;
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+    justify-content: space-between;
+}
+
+.footerC {
+    text-align: center;
+    color: #848899dd;
+    margin-right: 16px;
+}
+
+.footerL {
+    text-align: center;
+    margin-right: 16px;
+    color: #848899dd;
+}
+
+.footerL:hover {
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+@media (max-width: 1250px) {
+    .body {
+       overflow: hidden;
+    }
+    .textContainer {
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 850px) {
+    .textContainer {
+        margin-top: -60px;
+        width: 90vw;
+    }
+    .title {
+        letter-spacing: -0.03rem;
+        font-size: px;
+    }
+}
+
+@media (max-width: 625px) {
+    .textContainer {
+        margin-top: -30px;
+        width: 90vw;
+    }
+    .title {
+        letter-spacing: -0.03rem;
+        font-size: 64px;
+    }
+
+    .attrLabels {
+        display: inline-block
+    }
+
+    .attrLabel {
+        margin-bottom: 8px;
+    }
+
+    .attrT {
+        margin-bottom: 18px;
+    }
+    .attrS {
+        margin-top: -12px;
+    }
+    .footerText {
+        font-size: 11px;
+        width: 280px;
+    }
+}
+
+@media (max-width: 400px) {
+    .textContainer {
+        margin-top: 0px;
+        width: 90vw;
+    }
+    .title {
+        letter-spacing: -0.03rem;
+        font-size: 48px;
+    }
+    
+}

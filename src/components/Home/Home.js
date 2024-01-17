@@ -1,13 +1,17 @@
 import styles from "./Home.module.css";
+import React from "react";
 
 import Memento from "../../img/lpnew.png"
-import ASTA from "../../img/asta-img.png"
+import LPMobile from "../../img/lpmobile.png"
+import ASTA from "../../img/asta-img2.png"
 import WebPoint from "../../img/webpoint-img.png"
 import Blender from "../../img/blender-img.png"
 import LP from "../../img/mementonew.png"
 import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
+import ME from "../../img/Ben DiMarco.png"
 
+import Footer from '../../components/Nav/Footer';
 import Chihiro from "../../img/chihiro.png";
 import Tadao from "../../img/tadao.png";
 import Tyler from "../../img/tyler.png";
@@ -28,22 +32,25 @@ let projects = [
   {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct. 2021', end:'May 2022', role:'Co-Founder, Design Lead'},
   {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug. 2022', role:'UI/UX Designer, Front-end Developer'},
   {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr. 2023', end:'Present', role:'Design Lead'},
-  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun. 2023', end:'Aug. 2023', role:'Co-Founder, Design Lead'},
+  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun. 2023', end:'Aug. 2023', role:'Design Lead'},
   {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar. 2020', end:'Aug. 2021', role:'Co-Founder'}];
 
 let projectsAlt = [
-  {title:'3D Modeling', desc:"", start:'Jan. 2023', end:'Present', role:'Blender Fun'},
+  {title:'3D Modeling', desc:"", start:'Aug. 2023', end:'Present', role:'Blender Fun'},
   {title:'Misc. Work', desc:"", start:'Oct. 2020', end:'Present', role:'Everything Else'}];
   
 let interests = [
     {title:'Spirited Away', desc:"Studio Ghibli Film"},
     {title:'Yuval Noah Harari', desc:"Author of \"Sapiens\""},
-    {title:'Chamath Palihapitiya', desc:"Co-Host of the \"All-In\" Podcast"},
+    {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\""},
     {title:'Tadao Ando', desc:"Minimalist Japanese Architect"},
     {title:'Death\'s Door', desc:"Indie Adventure Game"},
     {title:'Joji', desc:"Experiemntal R&B Artist"},
     {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli"},
     {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer"}];
+
+let viewportHeight = window.innerHeight;
+let viewportWidth = window.innerWidth;
 
 const Home = () => {
 
@@ -71,7 +78,7 @@ const Home = () => {
       };
 
       fetchNowPlaying();
-      const interval = setInterval(fetchNowPlaying, 60000); // Refresh every 30 seconds
+      const interval = setInterval(fetchNowPlaying, 60000); // Refresh every 60 seconds
 
       return () => clearInterval(interval); // Clear interval on unmount
   }, []);
@@ -82,39 +89,25 @@ const Home = () => {
   const [projHovered, setProjHovered] = useState(0);
   const [projAltHovered, setProjAltHovered] = useState(0);
   const [interestHovered, setInterestHovered] = useState(0);
+  const [name, setName] = useState(false)
 
-  const mousePos = useMousePosition();
-
-  // return (
-  //   <div className={styles.page}>
-  //     <style jsx global>{`
-  //     body {
-  //       margin: 0px;
-  //       padding: 0px;
-  //     }
-  //   `}</style>
-  //     {/* <BPS></BPS> */}
-  //     <MementoCS></MementoCS>
-  //     {/* <NDMCA></NDMCA> */}
-  //   </div>
-  // )
+  const [numHovers, setNumHovers] = useState(0)
 
   return (
     <div 
       className={[styles.page].join(' ')}>
-        {/* style={{left: mousePos.x, top: mousePos.y, }} */}
-      <div className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor}  >
+      <div className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} >
       {hoveringProj ? 
       <>
         <p className={styles.hoverProjName}>{projects[projHovered].title}</p>
         {/* <p className={styles.hoverProjDesc}>{projects[projHovered].desc}</p> */}
         {/* <p className={styles.hoverProjDesc}>The largest beginner-freindly guide to prompt engineering</p> */}
+        {/* <p className={styles.hoverProjRole}>{projects[projHovered].role}</p> */}
           <div className={styles.hoverDates}>
             <p> {projects[projHovered].start} - <span className={projects[projHovered].end === 'Present' ? styles.white : styles.lightGray}>{projects[projHovered].end}</span></p>
             {/* {projects[projHovered].end === 'Present' ?  */}
             <div className={projects[projHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
-          {/* <p className={styles.hoverProjRole}>{projects[projHovered].role}</p> */}
           {/* <p className={styles.hoverClickText}>Case study →</p> */}
           {/* → */}
         </> 
@@ -123,7 +116,7 @@ const Home = () => {
           <p className={styles.hoverProjName}>{projectsAlt[projAltHovered].title}</p>
           {/* <p className={styles.hoverProjRole}>{projectsAlt[projAltHovered].role}</p> */}
           <div className={styles.hoverDates}>
-          <p> {projects[projHovered].start} - <span className={projectsAlt[projAltHovered].end === 'Present' ? styles.white : styles.lightGray}>{projectsAlt[projAltHovered].end}</span></p>
+          <p> {projectsAlt[projAltHovered].start} - <span className={projectsAlt[projAltHovered].end === 'Present' ? styles.white : styles.lightGray}>{projectsAlt[projAltHovered].end}</span></p>
             <div className={projectsAlt[projAltHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
           {/* <p className={styles.hoverClickText}>View →</p> */}
@@ -138,102 +131,130 @@ const Home = () => {
       <div className={styles.introContainer}>
         <div className={styles.spotifyDiv}>
           {currentTrack
-          ? <div className={styles.spotifyCircle}></div>
-          : <div className={styles.empty}></div>
+          ? <div className={styles.spotifyCircle}>
+            <div className={styles.spotifyLine1}></div>
+            <div className={styles.spotifyLine2}></div>
+            <div className={styles.spotifyLine3}></div>
+          </div>
+          : 
+          <div className={styles.spotifyCircle}>
+          </div>
           }
           {currentTrack 
-          ? <p className={styles.spotifyText}>{currentTrack.name}, by {currentTrack.artist["#text"]}</p>
-          : <></>
+          ? 
+          <p className={styles.spotifyText}>Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</p>
+          // <p className={styles.spotifyText}><a style={{textDecoration: "none", color: "#0CF4A3"}} href={currentTrack.url} target="_blank">Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</a></p>
+          : <p style={{color: "#444455"}} className={styles.spotifyText}>&#8203;</p>
           }
         </div>
-        <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer specializing in visual design.</h1>
+          <h1 className={styles.helloText}>Hi, I'm <span className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
+            Ben DiMarco
+            </span>, a computer science student and aspiring UI/UX designer specializing in visual design.</h1>
+        {/* <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer in training. <br></br><span style={{fontWeight: '300'}}>I love what I do.</span></h1> */}
         <h2 className={styles.studentText}>
-          I work to reduce interfaces to their essentials, designing with a focus on simplicity.
+          I like to reduce interfaces to their essentials, designing with a focus on simplicity.
         </h2>
         {/* <div className={styles.introHighlight} /> */}
       </div>
 
+      {numHovers >= 1 ? <div className={styles.spotlight}> </div> : <></>}
+      {name ? 
+        <div className={styles.me}>
+          <img className={styles.meImg} src={ME}></img>
+        </div> : <></> }
+        <div className={styles.info}>
+          <p>Resume</p>
+          <p>Resume</p>
+          <p>Resume</p>
+          <p>Resume</p>
+        </div>
+
       <div className={styles.interestsContainer}>
         <div className={styles.mementoImgContainer}>
-          <img className={styles.mementoImg} src={Memento} onMouseEnter={() => {setProjHovered(2); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+          <Link exact to="/learnprompting">
+            <img className={styles.mementoImg} src={Memento} onMouseEnter={() => {setProjHovered(2); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img> 
+          </Link>
         </div>
         <div className={styles.flex} >
           <div className={styles.workLeftContainer}>
             <div className={styles.workImgContainer}>
               <Link exact to="/bps">
-                <img className={styles.astaImg} src={ASTA} onMouseEnter={() => {setProjHovered(1); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+                <img className={styles.astaImg} src={ASTA} onMouseEnter={() => {setProjHovered(1); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
               </Link>
             </div>
             <div className={styles.workImgContainer}>
+              <Link exact to="/webpoint">
               <img className={styles.webpointImg} src={WebPoint} onMouseEnter={() => {setProjHovered(4); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              </Link>
             </div>
             <div className={styles.workImgContainer}>
-              <img className={styles.blenderImg} src={Blender} onMouseEnter={() => {setProjAltHovered(0); setHoveringProjAlt(true)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
+              <Link exact to="/3d">
+              <img className={styles.blenderImg} src={Blender} onMouseEnter={() => {setProjAltHovered(0); setHoveringProjAlt(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
+              </Link>
             </div>
           </div>
           <div className={styles.workRightContainer}>
+          <div className={styles.workImgContainer}>
+              <Link exact to="/neverdmca">
+                <img className={styles.blenderImg} src={NeverDMCA} onMouseEnter={() => {setProjHovered(3); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              </Link>
+            </div>
             <div className={styles.workImgContainer}>
               <Link exact to="/memento">
-                <img className={styles.lpImg} src={LP} onMouseEnter={() => {setProjHovered(0); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+                <img className={styles.lpImg} src={LP} onMouseEnter={() => {setProjHovered(0); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
               </Link>
             </div>
+            <a target="_blank" href="https://dribbble.com/bendimarco">
             <div className={styles.workImgContainer}>
-              <Link exact to="/neverdmca">
-                <img className={styles.blenderImg} src={NeverDMCA} onMouseEnter={() => {setProjHovered(3); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
-              </Link>
+              <img className={styles.miscImg} src={Misc} onMouseEnter={() => {setProjAltHovered(1); setHoveringProjAlt(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
             </div>
-            <div className={styles.workImgContainer}>
-              <img className={styles.miscImg} src={Misc} onMouseEnter={() => {setProjAltHovered(1); setHoveringProjAlt(true)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
-            </div>
+            </a>
           </div>
         </div>
       </div>
 
       <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
-            Music, architecture, animation, and nature are my artistic inspiration and infuse my work.
+            Music, architecture, animation, and nature are my artistic and personal inspiration.
           </h2>
-          <h2 className={styles.aboutText}>
-            Currently Expanding my knowlegde of photography, videography, 3d
-            modeling, and AR
-          </h2>
+          <h2 className={styles.aboutText}>Here are some of my favorites.</h2>
         </div>
 
       <div className={styles.interestsContainer}>
 
         <div className={styles.inspoTopContainer}>
           <div className={styles.vertContainer}>
-            <img className={styles.vertImg} src={Chihiro} onMouseEnter={() => {setInterestHovered(0); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-            <img className={styles.vertImg} src={Tadao}   onMouseEnter={() => {setInterestHovered(3); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-            <img className={styles.vertImg} src={Tyler}  onMouseEnter={() => {setInterestHovered(7); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+            <img className={styles.vertImg} src={Chihiro} onMouseEnter={() => {setInterestHovered(0); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+            <img className={styles.vertImg} src={Tadao}   onMouseEnter={() => {setInterestHovered(3); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+            <img className={styles.vertImg} src={Tyler}  onMouseEnter={() => {setInterestHovered(7); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
           </div>
 
           <div className={styles.horizContainer}>
             <div className={styles.threeContainer}>
               <div className={styles.yuvalImgContainer}>
-                <img className={styles.yuvalImg} src={Yuval} onMouseEnter={() => {setInterestHovered(1); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+                <img className={styles.yuvalImg} src={Yuval} onMouseEnter={() => {setInterestHovered(1); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
               </div>
               <div className={styles.threeSideConatiner}>
                 <div className={styles.chamathImgContainer}>
-                  <img className={styles.chamathImg} src={Chamath} onMouseEnter={() => {setInterestHovered(2); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+                  <img className={styles.chamathImg} src={Chamath} onMouseEnter={() => {setInterestHovered(2); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
                 </div>
                 <div className={styles.ddImgContainer}>
-                  <img className={styles.ddImg} src={DeathsDoor}  onMouseEnter={() => {setInterestHovered(4); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+                  <img className={styles.ddImg} src={DeathsDoor}  onMouseEnter={() => {setInterestHovered(4); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
                 </div>
               </div>
             </div>
             <div className={styles.twoContainer}>
-              <img className={styles.jojiImg} src={Joji}  onMouseEnter={() => {setInterestHovered(5); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-              <img className={styles.hisaishiImg} src={Hisaishi}  onMouseEnter={() => {setInterestHovered(6); setHoveringInterest(true)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+              <img className={styles.jojiImg} src={Joji}  onMouseEnter={() => {setInterestHovered(5); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+              <img className={styles.hisaishiImg} src={Hisaishi}  onMouseEnter={() => {setInterestHovered(6); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
             </div>
           </div>
         </div>
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
-                Get in touch, <a href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'underline', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>
+                Get in touch, <a className={styles.nameDiv}href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'none', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>
           </h2>
           <h2 className={styles.aboutText}>
-            (Open for work)
+            (Available for work)
           </h2>
         </div>
         {/* <Switch>
@@ -242,6 +263,13 @@ const Home = () => {
           <Route path="/bps" component={BPS} />
         </Switch> */}
       </div>
+      <div className={styles.footerText}>
+                <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
+                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
+                <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
+            </div>
+      {/* <Footer /> */}
     </div>
   );
 };
