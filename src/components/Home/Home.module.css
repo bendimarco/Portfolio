@@ -150,7 +150,9 @@
 .hoverClickText {
     margin-left: 12px;
     font-size: 12px;
-    margin-bottom: -4px;
+    margin-bottom: -6px;
+    margin-top: 14px;
+    font-weight: 300;
     /* font-style: italic; */
     color: #ffffff99;
 }
@@ -445,7 +447,7 @@
 }
 
 .nameDiv {
-    width: auto; 
+    width: auto;
     height: auto;
     cursor: pointer;
     background: #191926;

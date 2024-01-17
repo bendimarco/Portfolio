@@ -26,7 +26,7 @@ const BPS = () => {
             <div className={styles.attrLabels}>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Dates</p>
-                    <p className={styles.attrT}>May 2022 - Aug. 2022</p>
+                    <p className={styles.attrT}>May 2022 - Aug 2022</p>
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Role</p>

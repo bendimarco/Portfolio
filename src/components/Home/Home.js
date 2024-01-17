@@ -29,15 +29,15 @@ import { Suspense, lazy } from 'react';
 // import BPS from "../CaseStudies/BPS/BPS"
 
 let projects = [
-  {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct. 2021', end:'May 2022', role:'Co-Founder, Design Lead'},
-  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug. 2022', role:'UI/UX Designer, Front-end Developer'},
-  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr. 2023', end:'Present', role:'Design Lead'},
-  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun. 2023', end:'Aug. 2023', role:'Design Lead'},
-  {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar. 2020', end:'Aug. 2021', role:'Co-Founder'}];
+  {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct 2021', end:'Apr 2022', role:'Co-Founder, Design Lead'},
+  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug 2022', role:'UI/UX Designer, Front-end Developer'},
+  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr 2023', end:'Present', role:'Design Lead'},
+  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun 2023', end:'Aug 2023', role:'Design Lead'},
+  {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar 2020', end:'Aug 2021', role:'Co-Founder'}];
 
 let projectsAlt = [
-  {title:'3D Modeling', desc:"", start:'Aug. 2023', end:'Present', role:'Blender Fun'},
-  {title:'Misc. Work', desc:"", start:'Oct. 2020', end:'Present', role:'Everything Else'}];
+  {title:'3D Modeling', desc:"", start:'Aug 2023', end:'Present', role:'Blender Fun'},
+  {title:'Misc. Work', desc:"", start:'Oct 2020', end:'Present', role:'Everything Else'}];
   
 let interests = [
     {title:'Spirited Away', desc:"Studio Ghibli Film"},
@@ -108,7 +108,7 @@ const Home = () => {
             {/* {projects[projHovered].end === 'Present' ?  */}
             <div className={projects[projHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
-          {/* <p className={styles.hoverClickText}>Case study →</p> */}
+          {/* <p className={styles.hoverClickText}>Click to view </p> */}
           {/* → */}
         </> 
         : hoveringProjAlt ? 
@@ -119,7 +119,7 @@ const Home = () => {
           <p> {projectsAlt[projAltHovered].start} - <span className={projectsAlt[projAltHovered].end === 'Present' ? styles.white : styles.lightGray}>{projectsAlt[projAltHovered].end}</span></p>
             <div className={projectsAlt[projAltHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
-          {/* <p className={styles.hoverClickText}>View →</p> */}
+          {/* <p className={styles.hoverClickText}>Click to view</p> */}
         </>
         : hoveringInterest ? 
         <>

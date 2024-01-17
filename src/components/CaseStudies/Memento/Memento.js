@@ -21,7 +21,7 @@ const Memento = () => {
             <div className={styles.attrLabels}>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Dates</p>
-                    <p className={styles.attrT}>Oct. 2021 - Apr. 2022</p>
+                    <p className={styles.attrT}>Oct 2021 - Apr 2022</p>
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Role</p>
