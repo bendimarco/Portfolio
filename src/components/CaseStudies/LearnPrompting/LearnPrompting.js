@@ -12,6 +12,7 @@ import DS from "./img/lpds.png"
 import WB from "./img/wb.png"
 import OG from "./img/lpog.png"
 import Footer from "../../Nav/Footer"
+import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
     // const [detailActive, setDetailActive] = useState(false);
     // const [detailImg, setDetailImg] = useState(Comp);
@@ -80,12 +81,13 @@ const LearnPrompting = () => {
             <h6 class={styles.sectionHeader}>Ongoing Work (WIP)</h6>
             <p className={styles.overviewText}>Here is some of my ongoing design work.</p>
             <img src={LP2} className={styles.csImg}></img>
+            <h6 class={styles.sectionHeader}>More Coming Soon</h6>
             <p className={styles.overviewText}>And... that's all! Stay tuned for the finalized case study, and I can't wait to show you what I get to create next! <br></br></p>
             <p className={styles.overviewText}>In the meantime, check out where it all started: WebPoint ↓</p>
             <Link exact to="/webpoint"><img className={styles.bImg} src={WB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none'}}  href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>

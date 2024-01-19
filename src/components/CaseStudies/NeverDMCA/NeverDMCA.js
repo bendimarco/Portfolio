@@ -26,6 +26,7 @@ import PostGen from "./img/postgen.png"
 import Vid from "./img/testvideo.mp4"
 import LB from "./img/lb.png"
 import Footer from "../../Nav/Footer"
+import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
@@ -218,7 +219,7 @@ const NeverDMCA = () => {
             <Link exact to="/learnprompting"><img className={styles.bImg} src={LB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none'}} href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>

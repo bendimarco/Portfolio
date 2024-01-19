@@ -11,6 +11,7 @@ import Cards from "./img/cards.png"
 import NB from "./img/nb.png"
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from "../../Nav/Footer"
+import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
 const BPS = () => {
     return (
@@ -96,7 +97,7 @@ const BPS = () => {
             <Link exact to="/neverdmca"><img className={styles.bImg} src={NB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none'}}  href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>

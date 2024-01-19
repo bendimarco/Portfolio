@@ -13,6 +13,7 @@ import SISC from "./img/sisc.png"
 import MB from "./img/mb.png"
 import External from "./img/external.svg"
 import Footer from "../../Nav/Footer"
+import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
 const Memento = () => {
     return (
@@ -92,7 +93,7 @@ const Memento = () => {
             <Link exact to="/memento"><img className={styles.bImg} src={MB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none'}} href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>

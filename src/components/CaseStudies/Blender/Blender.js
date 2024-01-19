@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Hallo from "./img/hallo.png" 
 import Kiki from "./img/kiki.png" 
 import Tina from "./img/tina.png" 
+import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
 
 const Memento = () => {
@@ -66,7 +67,7 @@ const Memento = () => {
             <Link exact to="/bps"><img className={styles.bImg} src={BB}></img></Link> */}
               <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none', }} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none', }}  href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>

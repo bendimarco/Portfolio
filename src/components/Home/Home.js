@@ -11,6 +11,7 @@ import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
 import ME from "../../img/Ben DiMarco.png"
 import MEsmol from"../../img/mesmol.jpeg"
+import Resume from "../../img/BenDiMarcoResume2024.pdf"
 
 import Footer from '../../components/Nav/Footer';
 import Chihiro from "../../img/chihiro.png";
@@ -261,7 +262,7 @@ const Home = () => {
       </div>
       <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
-                <a style={{textDecoration: 'none'}} className={styles.footerL}>Resume </a>
+                <a style={{textDecoration: 'none'}} href={Resume} target="_blank" className={styles.footerL}>Resume </a>
                 <a href="mailto:bencdimarco@gmail.com" target="_blank" style={{textDecoration: 'none'}}  className={styles.footerL}>Email</a>
                 <a href="https://twitter.com/bencdimarco" target="_blank" style={{textDecoration: 'none'}} className={styles.footerL}>Twitter</a>
             </div>
