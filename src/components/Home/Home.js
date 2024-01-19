@@ -10,6 +10,7 @@ import LP from "../../img/mementonew.png"
 import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
 import ME from "../../img/Ben DiMarco.png"
+import MEsmol from"../../img/mesmol.jpeg"
 
 import Footer from '../../components/Nav/Footer';
 import Chihiro from "../../img/chihiro.png";
@@ -58,6 +59,7 @@ const Home = () => {
   const [lastTrack, setLastTrack] = useState(null);
   const apiKey = process.env.REACT_APP_API_KEY; 
   const user = process.env.REACT_APP_USER;
+  const [me, setMe] = useState(0)
 
   useEffect(() => {
       const fetchNowPlaying = async () => {
@@ -147,7 +149,7 @@ const Home = () => {
           : <p style={{color: "#444455"}} className={styles.spotifyText}>&#8203;</p>
           }
         </div>
-          <h1 className={styles.helloText}>Hi, I'm <span className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
+          <h1 className={styles.helloText}>Hi, I'm <span onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
             Ben DiMarco
             </span>, a computer science student and aspiring UI/UX designer specializing in visual design.</h1>
         {/* <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer in training. <br></br><span style={{fontWeight: '300'}}>I love what I do.</span></h1> */}
@@ -160,14 +162,8 @@ const Home = () => {
       {numHovers >= 1 ? <div className={styles.spotlight}> </div> : <></>}
       {name ? 
         <div className={styles.me}>
-          <img className={styles.meImg} src={ME}></img>
+          {me === 0 ? <img className={styles.meImg} src={ME}></img> : <img className={styles.meImg} src={MEsmol}></img>}
         </div> : <></> }
-        <div className={styles.info}>
-          <p>Resume</p>
-          <p>Resume</p>
-          <p>Resume</p>
-          <p>Resume</p>
-        </div>
 
       <div className={styles.interestsContainer}>
         <div className={styles.mementoImgContainer}>

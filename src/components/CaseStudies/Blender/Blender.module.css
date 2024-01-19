@@ -5,7 +5,8 @@
     padding: 16px;
     background-color: #FFF;
     font-family: 'Inter', sans-serif;
-    margin-top: -8px;
+    outline: 10px solid white;
+    overflow-x: hidden;
 }
 
 .bannerImg {

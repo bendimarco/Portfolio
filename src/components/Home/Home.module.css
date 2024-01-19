@@ -6,6 +6,7 @@
     background: black;
     color: white;
     margin-top: -4px;
+    outline: 10px solid black;
 }
 
 .info {

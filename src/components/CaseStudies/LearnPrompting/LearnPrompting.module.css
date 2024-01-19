@@ -6,7 +6,8 @@
     padding: 16px;
     background-color: black;
     font-family: 'Inter', sans-serif;
-    margin-top: -8px;
+    outline: 10px solid black;
+    overflow-x: hidden;
 }
 
 .vid {

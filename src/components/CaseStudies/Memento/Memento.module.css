@@ -4,8 +4,9 @@
     margin: 0;
     padding: 16px;
     background-color: #161419;
+    outline: 10px solid #161419;
     font-family: 'Inter', sans-serif;
-    margin-top: -4px;
+    overflow-x: hidden;
 }
 
 .bannerImg {
