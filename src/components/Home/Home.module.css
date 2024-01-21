@@ -73,10 +73,11 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(circle at 150px calc(100% - 20px), rgba(140, 178, 255, 0.16) 80px, rgba(0, 0, 0, 0.82) 300px);
+    background: radial-gradient(circle at 150px calc(100% - 20px), rgba(198, 205, 255, 0.30) 80px, rgba(0, 0, 0, 0.84) 300px);
     /* rgba(140, 178, 255, 0.2) */
     opacity: 0;
 }
+
 
 @keyframes fadein {
     0% {
