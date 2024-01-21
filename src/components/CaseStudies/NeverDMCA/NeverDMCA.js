@@ -195,7 +195,7 @@ const NeverDMCA = () => {
             <img className={styles.csImgwt} src={PreGen}></img>
             <h6 class={styles.sectionHeader}>Image Based Identification</h6>
             <p className={styles.overviewText}>To solve this, I decided to switch from a text-based identification system to an image-based identification system. </p>
-            <p className={styles.overviewText}>To create the images for each set of generations, we save a static set of images for each template category. Then, we randomly cut a small square out of that image to use for each generation in a set. So every generation in a set will be displayed as a small section of the same image. This way, all generations from a single set are both visually distinct from other sets (and visually connected to their own set), but also indivisually distinct as well.</p>
+            <p className={styles.overviewText}>To create the images for each set of generations, we save a static set of images for each template category. Then, we randomly cut a small square out of that image to use for each generation in a set. So every generation in a set will be displayed as a small section of the same image. This way, all generations from a single set are both visually distinct from other sets (and visually connected to their own set), but also individually distinct as well.</p>
             <p className={styles.overviewText}>This new format provided a few major improvements:
             <ol>
               <li>It was the most compact of all formats (it displayed the highest # of generations).</li>
