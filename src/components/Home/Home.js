@@ -140,14 +140,18 @@ const Home = () => {
             <div className={styles.spotifyLine3}></div>
           </div>
           : 
-          <div className={styles.spotifyCircle}>
-          </div>
+          <></>
+          // <div className={styles.spotifyCircle}>
+          //   <div className={styles.spotifyLine1o}></div>
+          //   <div className={styles.spotifyLine1o}></div>
+          //   <div className={styles.spotifyLine3o}></div>
+          // </div>
           }
           {currentTrack 
           ? 
           <p className={styles.spotifyText}>Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</p>
           // <p className={styles.spotifyText}><a style={{textDecoration: "none", color: "#0CF4A3"}} href={currentTrack.url} target="_blank">Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</a></p>
-          : <p style={{color: "#444455"}} className={styles.spotifyText}>&#8203;</p>
+          : <></>
           }
         </div>
           <h1 className={styles.helloText}>Hi, I'm <span style={{color: 'white'}} onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
