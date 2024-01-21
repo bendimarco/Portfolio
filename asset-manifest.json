@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4efd9bb8.css",
-    "main.js": "/static/js/main.418a8ea8.js",
+    "main.js": "/static/js/main.c13b2c83.js",
     "static/media/testvideo.mp4": "/static/media/testvideo.fdaf75f21ce0d108d6e2.mp4",
     "static/media/mementowork.png": "/static/media/mementowork.2beb80296df5679b24d7.png",
     "static/media/lp1new.png": "/static/media/lp1new.fa9c75b89107e1f4dcc5.png",
@@ -83,10 +83,10 @@
     "static/media/home.svg": "/static/media/home.46250771542041fb7e6f38a7cfb8608d.svg",
     "static/media/external.svg": "/static/media/external.4d3dd04947e68dc8f378fec02d8b3915.svg",
     "main.4efd9bb8.css.map": "/static/css/main.4efd9bb8.css.map",
-    "main.418a8ea8.js.map": "/static/js/main.418a8ea8.js.map"
+    "main.c13b2c83.js.map": "/static/js/main.c13b2c83.js.map"
   },
   "entrypoints": [
     "static/css/main.4efd9bb8.css",
-    "static/js/main.418a8ea8.js"
+    "static/js/main.c13b2c83.js"
   ]
 }
