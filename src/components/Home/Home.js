@@ -1,7 +1,7 @@
 import styles from "./Home.module.css";
 import React from "react";
 
-import Memento from "../../img/lpnew.png"
+import Memento from "../../img/lpnew2.png"
 import LPMobile from "../../img/lpmobile.png"
 import ASTA from "../../img/asta-img2.png"
 import WebPoint from "../../img/webpoint-img.png"
@@ -150,7 +150,7 @@ const Home = () => {
           : <p style={{color: "#444455"}} className={styles.spotifyText}>&#8203;</p>
           }
         </div>
-          <h1 className={styles.helloText}>Hi, I'm <span onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
+          <h1 className={styles.helloText}>Hi, I'm <span style={{color: 'white'}} onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
             Ben DiMarco
             </span>, a computer science student and aspiring UI/UX designer specializing in visual design.</h1>
         {/* <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer in training. <br></br><span style={{fontWeight: '300'}}>I love what I do.</span></h1> */}
