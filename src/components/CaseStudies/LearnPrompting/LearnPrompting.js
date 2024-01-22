@@ -82,8 +82,7 @@ const LearnPrompting = () => {
             <p className={styles.overviewText}>Here is some of my ongoing design work.</p>
             <img src={LP2} className={styles.csImg}></img>
             <h6 class={styles.sectionHeader}>More Coming Soon</h6>
-            <p className={styles.overviewText}>And... that's all! Stay tuned for the finalized case study, and I can't wait to show you what I get to create next! <br></br></p>
-            <p className={styles.overviewText}>In the meantime, check out where it all started: WebPoint ↓</p>
+            <p className={styles.overviewText}>And... that's all! Stay tuned for the finalized case study, and I can't wait to show you what I get to create next! In the meantime, check out where it all started: WebPoint ↓<br></br></p>
             <Link exact to="/webpoint"><img className={styles.bImg} src={WB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
