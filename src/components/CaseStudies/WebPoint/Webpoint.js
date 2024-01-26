@@ -44,7 +44,7 @@ const Memento = () => {
             <div className={styles.divider}></div>
             {/* Project Overview */}
             <p className={styles.overviewText}>
-              I have always loved websites and the visual magic that they seemed to be to me. So during the winter of 2019, I started my journey into web development! To my sadness, there were extremely few resources at my school and amongst my friends to learn. I had to self-teach myself everything from HTML to CSS to Javascript from the ground up.
+              I have always loved websites and the visual magic that they seemed to be to me. So during the winter of 2019, I started my journey into web development! To my sadness, there were extremely few resources at my school or in my community to learn. I had to self-teach myself everything from HTML to CSS to Javascript from the ground up.
               At the same time, the world began to shut down. The COVID-19 pandemic was starting what would become a year-and-a-half-long shutdown that no one was anticipating. 
             </p>
             <p className={styles.overviewText}>
@@ -54,7 +54,7 @@ const Memento = () => {
               working with real-world clients. All while making a real impact on people.
             </p>
             <p className={styles.overviewText}>
-              Our 2-person organization would quickly grow from us 2 to 14 total student volunteers. This was amazing to me because it allowed me to create the experience I wished I had for myself but for others. <a style={{color: "#6E6E6E"}} href="https://webpoint.dev/index.html" target="_blank">Check it out here</a>.
+              Our 2-person organization would quickly grow from us 2 to 14 total student volunteers. This was amazing to me because it allowed me to create the experience I wished I had for myself for others. <a style={{color: "#6E6E6E"}} href="https://webpoint.dev/index.html" target="_blank">Check it out here</a>.
             </p>
             <h6 class={styles.sectionHeader}>Our Goal</h6>
             <p className={styles.overviewText}>
@@ -62,7 +62,7 @@ const Memento = () => {
             </p>
             <h6 class={styles.sectionHeader}>My Role</h6>
             <p className={styles.overviewText}>
-              As both the technical and design lead, I mentored others on how to get started designing and developing, reviewed their work with them, and did my own designing and developing. And as a co-founder, I ensured everything at a high level was organized and running smoothly.
+=As both the technical and design lead, I completed the heavy design and development tasks, mentored others on how to get started designing and developing, reviewed their work, and united our team under a single vision and end goal for each project. And as a co-founder, I ensured everything at a high level was well organized, running smoothly, and in line with our clients' wishes.
             </p>
             <h6 class={styles.sectionHeader}></h6>
             <p className={styles.overviewText}></p>
