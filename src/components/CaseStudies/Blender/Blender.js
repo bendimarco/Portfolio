@@ -46,7 +46,7 @@ const Memento = () => {
             Sadly, due to my potato laptop, it has been very tedious to work on and render. 🥲</p>
             <img className={styles.csImg} src={Kiki}></img>
             <h6 class={styles.sectionHeader}>Tina Kitten Vandal Skin (WIP)</h6>
-            <p className={styles.overviewText}>I am a huge fan of the Twitch streamer <a style={{color: "#555555"}}target="_blank" href="https://www.twitch.tv/tinakitten">Tina Kitten</a>. In 2023, she played a lot of Valorant, so I thought it would be fun to try to make a Tina Kitten-themed skin for the Vandal just like the ones from the game! This skin featured a basket-woven magazine and a cute little bow on the side :)</p>
+            <p className={styles.overviewText}>I am a huge fan of the Twitch streamer <a style={{color: "#555555"}}target="_blank" href="https://www.twitch.tv/tinakitten">Tina Kitten</a>, and in 2023, she played a lot of Valorant, so I thought it would be fun to try to make a Tina Kitten-themed skin for the Vandal just like the ones from the game! This skin featured a basket-woven magazine and a pink bow on the side.</p>
             <img className={styles.csImg} src={Tina}></img>
             {/* <p className={styles.overviewText}>Ian built a payment system that would allow users to buy an NFT with their credit card, and I was enlisted to give it a web presence and a pretty coat of paint.</p>
             <h6 class={styles.sectionHeader}>Our Goal</h6>
