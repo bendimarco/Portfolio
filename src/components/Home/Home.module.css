@@ -3,7 +3,6 @@
     margin: 0;
     font-family: 'Be Vietnam Pro', san-serif;
     overflow-x: hidden;
-    background: #0e0e18;
     background: black;
     color: white;
     margin-top: -4px;
@@ -177,7 +176,7 @@
     margin-left: 8px;
     margin-top: 16px;
     border-radius: 50%;
-    background: #ffffff55;
+    background: #ffffff22;
 }
 
 .white{
@@ -339,7 +338,7 @@
 }
 
 .spotifyTextGrey {
-    color: #212433;
+    color: #444455;
     font-size: 16px;
     font-weight: 300;
     margin-left: 10px;
@@ -436,7 +435,7 @@
 
 .helloText {
     font-size: 36px;
-    font-weight: 100;
+    font-weight: 200;
     width: 745px;
     padding: 0;
 }
@@ -455,9 +454,40 @@
     height: auto;
     cursor: pointer;
     background: #191926;
+    /* background: linear-gradient(217deg, #19192699, #2f2f4555 70.71%),
+            linear-gradient(127deg, #13131dee, #2d2d4899 70.71%),
+            linear-gradient(336deg, #2f2f4555, #2f2f45 70.71%); */
     padding: 1px 8px;
     border-radius: 4px;
 }
+
+@keyframes flow {
+    from {
+        background: linear-gradient(217deg, #19192699, #2f2f4555 70.71%),
+            linear-gradient(127deg, #13131dee, #2d2d4899 70.71%),
+            linear-gradient(336deg, #2f2f4555, #2f2f45 70.71%);
+    }
+
+    40% {
+        background: linear-gradient(217deg, #2d2d48, #2f2f4555 70.71%),
+            linear-gradient(127deg, #13131dee, #13131dee 70.71%),
+            linear-gradient(336deg, #2f2f4555, #2d2d4899 70.71%);
+    }
+
+    50% {
+        background: linear-gradient(217deg, #13131dee ,#2f2f45 70.71%),
+            linear-gradient(127deg, #13131dee, #13131dee 70.71%),
+            linear-gradient(336deg, #19192699, #2d2d4899 70.71%);
+    }
+
+    90% {
+        opacty: 0.6;
+    }
+  
+    to {
+        opacty: 0.6;
+    }
+  }
 
 .introHighlight {
     position: absolute;
@@ -530,7 +560,6 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    margin-tOp: 50px;
     margin-left: 20px;
     background: #22E29D;
     box-shadow: 0px 0px 6px #22E29D55;
@@ -552,7 +581,6 @@
 .mementoImgContainer {
     width: calc(100% - 20px);
     margin-left: 10px;
-    margin-top: 120px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -755,7 +783,6 @@
     
     .helloText {
         font-size: 32px;
-        font-weight: 100;
         width: 645px;
     }
     
@@ -790,7 +817,6 @@
     
     .helloText {
         font-size: 24px;
-        font-weight: 100;
         width: 80%;
     }
 
@@ -976,7 +1002,6 @@
 
     .helloText {
         font-size: 24px;
-        font-weight: 100;
         width: 96vw;
         margin: 0;
         margin-bottom: 48px;

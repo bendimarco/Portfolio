@@ -20,7 +20,7 @@ import Tyler from "../../img/tyler.png";
 import Yuval from "../../img/yuval.png";
 import Chamath from "../../img/chamath.png";
 import DeathsDoor from "../../img/dd2.png";
-import Joji from "../../img/joji.png";
+import Joji from "../../img/wes2.png";
 import Hisaishi from "../../img/hisaishi.png";
 import { useState, useEffect } from "react";
 import useMousePosition from "../Hooks/UseMousePosition"
@@ -44,12 +44,12 @@ let projectsAlt = [
 let interests = [
     {title:'Spirited Away', desc:"Studio Ghibli Film", impact:"My favorite movie of all time, and a beautiful implementation of the Japanese concept Ma (間), the space between things."},
     {title:'Yuval Noah Harari', desc:"Author of \"Sapiens\"", impact:"Sapiens is my favorite book, and I love Harari's assertion that our greatest power, and what makes us uniquely human, is our ability to create narratives and to connect through shared stories."},
-    {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\"", impact:"The All-in Pod is my weekly update on the worlds of technology, biology, economics, and startups. "},
-    {title:'Tadao Ando', desc:"Minimalist Japanese Architect",impact:"The minimalism and attention to emotion that Ando exhibits thorugh his work is a true inspiration to me."},
-    {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. It is amazing that it was created by a small team of two."},
-    {title:'Joji', desc:"Experiemntal R&B Artist", impact:"As a 2000s internet kid, watching Joji go from a YouTuber to a world-class musician was really powerful to me. It's beautiful how we all grow and change as both people and artists."},
-    {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli", impact:"To me, Hisaishi's compositions perfectly completement the deeply human and emotional films of Studio Ghibli. He connects to the heart."},
-    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler is constantly innovating and never lets anything stand in his way of creating what he loves, from music to fashion to performance. I hope to carry this same attitude myself."}];
+    {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\"", impact:"The All-in Pod is my favorite weekly update on the worlds of technology, biology, economics, and startups. "},
+    {title:'Tadao Ando', desc:"Minimalist Japanese Architect",impact:"The minimalism and attention to emotion that Ando exhibits through his work is a true inspiration to me."},
+    {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. Created by a team of only two, it reminds me that you don't need permission to create something that has a huge impact on others."},
+    {title:'Wes Anderson', desc:"American Director and Filmmaker", impact:"I can only aspire to the detailed perfectionism of Wes Anderson. I hope to put the same amount of care into each pixel of my work as Wes puts into each frame of his movies."},
+    {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli", impact:"To me, Hisaishi's music is the perfect representation of Studio Ghibli in sonic form. Simplistic beauty ♪"},
+    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler, the Creator, is constantly innovating and never lets anything stop him from bringing his creative visions into reality. He has taught me that, whatever it is, you can do it."}];
 
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
@@ -68,6 +68,7 @@ const Home = () => {
   const apiKey = process.env.REACT_APP_API_KEY; 
   const user = process.env.REACT_APP_USER;
   const [me, setMe] = useState(0)
+  const [listening, setListening] = useState(false)
 
   useEffect(() => {
       const fetchNowPlaying = async () => {
@@ -79,8 +80,10 @@ const Home = () => {
               setLastTrack(track);
               if (track["@attr"] && track["@attr"].nowplaying) {
                   setCurrentTrack(track);
+                  setListening(true)
               } else {
                 setCurrentTrack(null);
+                setListening(false)
               }
           } catch (error) {
               console.error('Error fetching data from Last.fm:', error);
@@ -88,7 +91,7 @@ const Home = () => {
       };
 
       fetchNowPlaying();
-      const interval = setInterval(fetchNowPlaying, 60000); // Refresh every 60 seconds
+      const interval = setInterval(fetchNowPlaying, 30000); // Refresh every 60 seconds
 
       return () => clearInterval(interval); // Clear interval on unmount
   }, []);
@@ -147,16 +150,23 @@ const Home = () => {
             <div className={styles.spotifyLine3}></div>
           </div>
           : 
-          <></>
-          // <div className={styles.spotifyCircle}>
-          //   <div className={styles.spotifyLine1o}></div>
-          //   <div className={styles.spotifyLine1o}></div>
-          //   <div className={styles.spotifyLine3o}></div>
-          // </div>
+          // <></>
+          <div className={styles.spotifyCircle}>
+            <div className={styles.spotifyLine1o}></div>
+            <div className={styles.spotifyLine1o}></div>
+            <div className={styles.spotifyLine3o}></div>
+          </div>
           }
-          {currentTrack 
+
+        {currentTrack 
+        ?
+        <p className={styles.spotifyText}>Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</p>
+        : 
+        <></>}
+
+          {lastTrack && !listening
           ? 
-          <p className={styles.spotifyText}>Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</p>
+          <p className={styles.spotifyTextGrey}>Last listened to {lastTrack.name}, by {lastTrack.artist["#text"]}</p>
           // <p className={styles.spotifyText}><a style={{textDecoration: "none", color: "#0CF4A3"}} href={currentTrack.url} target="_blank">Listening to {currentTrack.name}, by {currentTrack.artist["#text"]}</a></p>
           : <></>
           }
@@ -223,7 +233,7 @@ const Home = () => {
 
       <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
-            Music, architecture, animation, and nature are my artistic and personal inspiration.
+            Music, architecture, storytelling, and nature are my artistic and personal inspiration.
           </h2>
           <h2 className={styles.aboutText}>Here are some of my favorites.</h2>
         </div>
