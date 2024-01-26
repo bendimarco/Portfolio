@@ -46,8 +46,8 @@ let interests = [
     {title:'Yuval Noah Harari', desc:"Author of \"Sapiens\"", impact:"Sapiens is my favorite book, and I love Harari's assertion that our greatest power, and what makes us uniquely human, is our ability to create narratives and to connect through shared stories."},
     {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\"", impact:"The All-in Pod is my favorite weekly update on the worlds of technology, biology, economics, and startups. "},
     {title:'Tadao Ando', desc:"Minimalist Japanese Architect",impact:"The minimalism and attention to emotion that Ando exhibits through his work is a true inspiration to me."},
-    {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. Created by a team of only two, it reminds me that you don't need permission to create something that has a huge impact on others."},
-    {title:'Wes Anderson', desc:"American Director and Filmmaker", impact:"I can only aspire to the detailed perfectionism of Wes Anderson. I hope to put the same amount of care into each pixel of my work as Wes puts into each frame of his movies."},
+    {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. Created by a team of only two, it reminds me that you don't need permission to create something that has an impact on others."},
+    {title:'Wes Anderson', desc:"American Director and Filmmaker", impact:"I can only aspire to the detailed perfectionism of Wes Anderson. I hope to put the same amount of care into each pixel of my work as Wes puts into each frame of his."},
     {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli", impact:"To me, Hisaishi's music is the perfect representation of Studio Ghibli in sonic form. Simplistic beauty ♪"},
     {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler, the Creator, is constantly innovating and never lets anything stop him from bringing his creative visions into reality. He has taught me that, whatever it is, you can do it."}];
 

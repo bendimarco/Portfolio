@@ -62,7 +62,7 @@ const Memento = () => {
             </p>
             <h6 class={styles.sectionHeader}>My Role</h6>
             <p className={styles.overviewText}>
-=As both the technical and design lead, I completed the heavy design and development tasks, mentored others on how to get started designing and developing, reviewed their work, and united our team under a single vision and end goal for each project. And as a co-founder, I ensured everything at a high level was well organized, running smoothly, and in line with our clients' wishes.
+As both the technical and design lead, I completed the heavy design and development tasks, mentored others on how to get started designing and developing, reviewed their work, and united our team under a single vision and end goal for each project. And as a co-founder, I ensured everything at a high level was well organized, running smoothly, and in line with our clients' wishes.
             </p>
             <h6 class={styles.sectionHeader}></h6>
             <p className={styles.overviewText}></p>
