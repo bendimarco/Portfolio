@@ -29,6 +29,7 @@ import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 const LearnPrompting = () => {
     return (
         <div className={styles.body}>
+             <div id="cursor"></div>
             {/* Banner */}
             <div className={styles.bannerDiv}>
             <img className={styles.bannerImg} src={Banner} alt="Memento Banner"/>
@@ -44,11 +45,11 @@ const LearnPrompting = () => {
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Role</p>
-                    <p className={styles.attrT}>Design Lead</p>
+                    <p className={styles.attrT}>Lead Designer / Front-end Engineer</p>
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>&#x200B;</p>
-                    <p className={styles.attrT}>Brand / UX / UI </p>
+                    <p className={styles.attrT}>Brand / UX / UI / SWE</p>
                 </div>
             </div>
             <div className={styles.divider}></div>

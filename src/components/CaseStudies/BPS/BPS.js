@@ -16,6 +16,7 @@ import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 const BPS = () => {
     return (
         <div className={styles.body}>
+           <div id="cursor"></div>
           {/* Banner */}
           <div className={styles.bannerDiv}>
             <img className={styles.bannerImg} src={Banner} alt="NeverDMCA Banner"/>

@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Be Vietnam Pro', san-serif;
     overflow-x: hidden;
+    background: #0e0e18;
     background: black;
     color: white;
     margin-top: -4px;
@@ -43,30 +44,31 @@
 
     border-radius: 4px;
     position: fixed;
-    backdrop-filter: blur(28px);
-    /* background: #000008bb; */
-    background: #191926cc;
+    backdrop-filter: blur(18px); 
+    background: #191926bb;
+    background: #222233bb;
     padding-bottom: 20px;
 
-    bottom: 30px;
-    left: 30px;
     z-index: 10;
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #fff;
     transition: 0.1s;
-    pointer-events: none;
-}
+    position: fixed; /* Floating above */
+    transition: 0.2s; /* Sticking effect */
+    transition-timing-function: ease-out;
+    pointer-events: none; /* Allow clicking trough the div */
+} 
 
 .cursorvisible {
     opacity: 1;
 }
-
+/*
 .spotlight {
     position: fixed;
     z-index: 2;
     pointer-events:none;
     animation-name: light;
-    animation: light 4s forwards;
+    animation: light 4s forwards; 
     top: 0;
     left: 0;
     right: 0;
@@ -74,9 +76,8 @@
     width: 100vw;
     height: 100vh;
     background: radial-gradient(circle at 150px calc(100% - 20px), rgba(198, 205, 255, 0.30) 80px, rgba(0, 0, 0, 0.84) 300px);
-    /* rgba(140, 178, 255, 0.2) */
     opacity: 0;
-}
+} */
 
 
 @keyframes fadein {
@@ -112,7 +113,7 @@
     margin-top: 0px;
     font-weight: 200;
     margin-bottom: -16px;
-    color: #ffffff99;
+    color: #ffffffaa;
 }
 
 .hoverProjName {
@@ -135,7 +136,7 @@
     margin: 12px 12px;
     margin-bottom: -4px;
     margin-top: 12px;
-    color: #ffffff99;
+    color: #ffffffaa;
 }
 
 .hoverInspoSubtext {
@@ -145,7 +146,8 @@
     margin: 12px 12px;
     margin-bottom: -4px;
     margin-top: 12px;
-    color: #ffffff99;
+    line-height: 18px;
+    color: #ffffffaa;
 }
 
 
@@ -156,7 +158,7 @@
     margin-top: 14px;
     font-weight: 300;
     /* font-style: italic; */
-    color: #ffffff99;
+    color: #ffffffaa;
 }
 
 .hoverProjDesc {
@@ -165,7 +167,7 @@
     margin: 12px 12px;
     margin-bottom: 0px;
     margin-top: 8px;
-    color: #ffffff99;
+    color: #ffffffaa;
     /* font-style: italic; */
 }
 
@@ -175,7 +177,7 @@
     margin-left: 8px;
     margin-top: 16px;
     border-radius: 50%;
-    background: #ffffff44;
+    background: #ffffff55;
 }
 
 .white{
@@ -484,7 +486,7 @@
 }
 
 .vertContainer {
-    width: 200%;
+    width: 38vw;
     margin-left: 10px;
     /* width: 39%;
     display: flex;
@@ -506,6 +508,7 @@
 }
 
 .horizContainer {
+    width: 62vw;
     display: flex;
     flex-direction: column;
     height: auto;
@@ -721,31 +724,18 @@
     margin-left: 20%;
 }
 
-@media (max-width: 2000px) {
-    .vertContainer {
-        width: 180%;
-    }
-}
-
-@media (max-width: 1800px) {
-    .vertContainer {
-        width: 210%;
-    }
-}
 
 @media (max-width: 1450px) {
     .vertContainer {
-        width: 250%;
+        width: 38vw;
+    }
+    .horizContainer {
+        width: 62vw;
     }
 
 }
 
 @media (max-width: 1250px) {
-
-    .vertContainer {
-        width: 300%;
-    }
-
     .meImg {
         width: 150px;
         /* animation: fadein;
@@ -776,16 +766,9 @@
 }
 
 @media (max-width: 1050px) {
-    .vertContainer {
-        width: 360%;
-    }
 }
 
 @media (max-width: 850px) {
-
-    .vertContainer {
-        width: 440%;
-    }
 
     .introContainer {
         margin-left: 20px;

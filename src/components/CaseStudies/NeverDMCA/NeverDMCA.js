@@ -27,6 +27,7 @@ import Vid from "./img/testvideo.mp4"
 import LB from "./img/lb.png"
 import Footer from "../../Nav/Footer"
 import Resume from "../../../img/BenDiMarcoResume2024.pdf"
+import Brand from "./img/brand.png"
 
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
@@ -48,6 +49,7 @@ const NeverDMCA = () => {
 
     return (
         <div className={styles.body}>
+           <div id="cursor"></div>
         <style jsx global>{`
           body {
             margin: 0px;
@@ -72,7 +74,7 @@ const NeverDMCA = () => {
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>Role</p>
-                    <p className={styles.attrT}>Design Lead</p>
+                    <p className={styles.attrT}>Lead Designer</p>
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>&#x200B;</p>
@@ -109,7 +111,11 @@ const NeverDMCA = () => {
             <p className={styles.overviewText}>I decided to focus on creating the most simplified and minimal experience possible for music generation. And I wanted my design language to reflect this simplicity and minimalism. I also wanted the design to stand out as unique in a marketplace saturated with very corporate-y designs and interfaces.</p>
             <p className={styles.overviewText}>I wanted people to feel like they were using something on the cutting edge that was specifically built for them. Something with only the essential features that they needed. I wanted people to have fun using it and for the interface to bring out the inner child and creativity.
             </p>
-            <h6 class={styles.sectionHeader}>Inital Design</h6>
+            <h6 class={styles.sectionHeader}>Looking at the User</h6>
+            <p className={styles.overviewText}>After deciding on a direction, I created user personas to detail the specific goals and painpoints that I could address.
+            </p>
+            <img className={styles.csImg} src={Brand}></img>
+            <h6 class={styles.sectionHeader}>Brand Identity</h6>
             <p className={styles.overviewText}>In my initial design, I focused on creating a simplified interface and flow for music generation that was not overwhelming but still had essential components to give users fine-tooth control over their generations.
             </p>
             <img className={styles.csImgwt} src={ND1}></img>

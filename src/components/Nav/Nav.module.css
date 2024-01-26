@@ -6,9 +6,9 @@
     height: 50px;
     left: 30px;
     top: 30px;
-    backdrop-filter: blur(28px);
-    /* background: #000008bb; */
-    background: #191926cc;
+    backdrop-filter: blur(16px); 
+    background: #191926bb;
+    background: #222233bb;
     z-index: 1;
     border-radius: 4px;
     /* border: 1.8px solid #ffffff11; */

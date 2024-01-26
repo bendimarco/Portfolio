@@ -19,7 +19,7 @@ import Tadao from "../../img/tadao.png";
 import Tyler from "../../img/tyler.png";
 import Yuval from "../../img/yuval.png";
 import Chamath from "../../img/chamath.png";
-import DeathsDoor from "../../img/deathsdoor.png";
+import DeathsDoor from "../../img/dd2.png";
 import Joji from "../../img/joji.png";
 import Hisaishi from "../../img/hisaishi.png";
 import { useState, useEffect } from "react";
@@ -31,30 +31,37 @@ import { Suspense, lazy } from 'react';
 // import BPS from "../CaseStudies/BPS/BPS"
 
 let projects = [
-  {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct 2021', end:'Apr 2022', role:'Co-Founder, Design Lead'},
-  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug 2022', role:'UI/UX Designer, Front-end Developer'},
-  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr 2023', end:'Present', role:'Design Lead'},
-  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun 2023', end:'Aug 2023', role:'Design Lead'},
-  {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar 2020', end:'Aug 2021', role:'Co-Founder'}];
+  {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct 2021', end:'Apr 2022', role:'Co-Founder / Lead Designer'},
+  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug 2022', role:'UI/UX Designer / Front-end Eng.'},
+  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr 2023', end:'Present', role:'Lead Designer / Front-end Eng.'},
+  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun 2023', end:'Aug 2023', role:'Lead Designer / Front-end Eng.'},
+  {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar 2020', end:'Aug 2021', role:'Co-Founder / Lead Designer'}];
 
 let projectsAlt = [
-  {title:'3D Modeling', desc:"", start:'Aug 2023', end:'Present', role:'Blender Fun'},
-  {title:'Misc. Work', desc:"", start:'Oct 2020', end:'Present', role:'Everything Else'}];
+  {title:'3D Modeling', desc:"", start:'Aug 2023', end:'Present', role:'Blender Fun :)'},
+  {title:'Misc. Work', desc:"", start:'Oct 2020', end:'Present', role:'Everything Else!'}];
   
 let interests = [
-    {title:'Spirited Away', desc:"Studio Ghibli Film"},
-    {title:'Yuval Noah Harari', desc:"Author of \"Sapiens\""},
-    {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\""},
-    {title:'Tadao Ando', desc:"Minimalist Japanese Architect"},
-    {title:'Death\'s Door', desc:"Indie Adventure Game"},
-    {title:'Joji', desc:"Experiemntal R&B Artist"},
-    {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli"},
-    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer"}];
+    {title:'Spirited Away', desc:"Studio Ghibli Film", impact:"My favorite movie of all time, and a beautiful implementation of the Japanese concept Ma (間), the space between things."},
+    {title:'Yuval Noah Harari', desc:"Author of \"Sapiens\"", impact:"Sapiens is my favorite book, and I love Harari's assertion that our greatest power, and what makes us uniquely human, is our ability to create narratives and to connect through shared stories."},
+    {title:'Chamath Palihapitiya', desc:"Co-Host of \"The All-In Podcast\"", impact:"The All-in Pod is my weekly update on the worlds of technology, biology, economics, and startups. "},
+    {title:'Tadao Ando', desc:"Minimalist Japanese Architect",impact:"The minimalism and attention to emotion that Ando exhibits thorugh his work is a true inspiration to me."},
+    {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. It is amazing that it was created by a small team of two."},
+    {title:'Joji', desc:"Experiemntal R&B Artist", impact:"As a 2000s internet kid, watching Joji go from a YouTuber to a world-class musician was really powerful to me. It's beautiful how we all grow and change as both people and artists."},
+    {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli", impact:"To me, Hisaishi's compositions perfectly completement the deeply human and emotional films of Studio Ghibli. He connects to the heart."},
+    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler is constantly innovating and never lets anything stand in his way of creating what he loves, from music to fashion to performance. I hope to carry this same attitude myself."}];
 
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
 
+
+
 const Home = () => {
+
+  document.addEventListener('mousemove', function(ev){
+    document.getElementById('cursor').style.transform = 'translateY('+(ev.clientY+30)+'px)';
+    document.getElementById('cursor').style.transform += 'translateX('+(ev.clientX-120)+'px)';            
+},false);
 
   const [currentTrack, setCurrentTrack] = useState(null);
   const [lastTrack, setLastTrack] = useState(null);
@@ -99,7 +106,7 @@ const Home = () => {
   return (
     <div 
       className={[styles.page].join(' ')}>
-      <div className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} >
+      <div id="cursor" className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} >
       {hoveringProj ? 
       <>
         <p className={styles.hoverProjName}>{projects[projHovered].title}</p>
@@ -111,7 +118,7 @@ const Home = () => {
             {/* {projects[projHovered].end === 'Present' ?  */}
             <div className={projects[projHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
-          {/* <p className={styles.hoverClickText}>Click to view </p> */}
+          <p className={styles.hoverClickText}>{projects[projHovered].role}</p>
           {/* → */}
         </> 
         : hoveringProjAlt ? 
@@ -122,12 +129,12 @@ const Home = () => {
           <p> {projectsAlt[projAltHovered].start} - <span className={projectsAlt[projAltHovered].end === 'Present' ? styles.white : styles.lightGray}>{projectsAlt[projAltHovered].end}</span></p>
             <div className={projectsAlt[projAltHovered].end === 'Present' ? [styles.statusIcon, styles.statusPresent].join(' ') : styles.statusIcon}/>
           </div>
-          {/* <p className={styles.hoverClickText}>Click to view</p> */}
         </>
         : hoveringInterest ? 
         <>
           <p className={styles.hoverProjName}>{interests[interestHovered].title}</p>
           <p className={styles.hoverInspoSubtext}>{interests[interestHovered].desc}</p>
+          <p style={{color: "white"}}className={styles.hoverInspoSubtext}>{interests[interestHovered].impact}</p>
         </> 
       : <></>}
       </div>

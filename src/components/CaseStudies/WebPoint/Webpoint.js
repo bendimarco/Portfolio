@@ -18,6 +18,7 @@ import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 const Memento = () => {
     return (
         <div className={styles.body}>
+           <div id="cursor"></div>
           {/* Banner */}
           <div className={styles.bannerDiv}>
             <img className={styles.bannerImg} src={Banner} alt="Memento Banner"/>
@@ -37,7 +38,7 @@ const Memento = () => {
                 </div>
                 <div className={styles.attr}>
                     <p className={styles.attrLabel}>&#x200B;</p>
-                    <p className={styles.attrT}>UX / UI / Front-end development</p>
+                    <p className={styles.attrT}>UX / UI / SWE</p>
                 </div>
             </div>
             <div className={styles.divider}></div>
