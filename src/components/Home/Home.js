@@ -49,7 +49,7 @@ let interests = [
     {title:'Death\'s Door', desc:"Indie Adventure Game", impact:"A beautiful game with an amazing story, message, and soundtrack. Created by a team of only two, it reminds me that you don't need permission to create something that has an impact on others."},
     {title:'Wes Anderson', desc:"American Director and Filmmaker", impact:"I can only aspire to the detailed perfectionism of Wes Anderson. I hope to put the same amount of care into each pixel of my work as Wes puts into each frame of his."},
     {title:'Joe Hisaishi', desc:"Composer for Studio Ghibli", impact:"To me, Hisaishi's music is the perfect representation of Studio Ghibli in sonic form. Simplistic beauty ♪"},
-    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler, the Creator, is constantly innovating and never lets anything stop him from bringing his creative visions into reality. He has taught me that, whatever it is, you can do it."}];
+    {title:'Tyler, the Creator', desc:"Songwriter, Producer, Performer", impact:"Tyler, the Creator, is constantly innovating and never lets anything stop him from bringing his creative visions into reality. He has taught me that, whatever it is, you can create it."}];
 
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
@@ -173,7 +173,7 @@ const Home = () => {
         </div>
           <h1 className={styles.helloText}>Hi, I'm <span style={{color: 'white'}} onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
             Ben DiMarco
-            </span>, a computer science student and aspiring UI/UX designer specializing in visual design.</h1>
+            </span>, a computer science student and aspiring design engineer specializing in visual design.</h1>
         {/* <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer in training. <br></br><span style={{fontWeight: '300'}}>I love what I do.</span></h1> */}
         <h2 className={styles.studentText}>
           I like to reduce interfaces to their essentials, designing with a focus on simplicity.
@@ -188,11 +188,11 @@ const Home = () => {
         </div> : <></> }
 
       <div className={styles.interestsContainer}>
-        <div className={styles.mementoImgContainer}>
+        {/* <div className={styles.mementoImgContainer}>
           <Link exact to="/learnprompting">
             <img className={styles.mementoImg} src={Memento} onMouseEnter={() => {setProjHovered(2); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img> 
           </Link>
-        </div>
+        </div> */}
         <div className={styles.flex} >
           <div className={styles.workLeftContainer}>
             <div className={styles.workImgContainer}>
@@ -231,16 +231,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.aboutTextContainer}>
+      {/* <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
             Music, architecture, storytelling, and nature are my artistic and personal inspiration.
           </h2>
           <h2 className={styles.aboutText}>Here are some of my favorites.</h2>
-        </div>
+        </div> */}
 
       <div className={styles.interestsContainer}>
 
-        <div className={styles.inspoTopContainer}>
+        {/* <div className={styles.inspoTopContainer}>
           <div className={styles.vertContainer}>
             <img className={styles.vertImg} src={Chihiro} onMouseEnter={() => {setInterestHovered(0); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
             <img className={styles.vertImg} src={Tadao}   onMouseEnter={() => {setInterestHovered(3); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
@@ -266,7 +266,7 @@ const Home = () => {
               <img className={styles.hisaishiImg} src={Hisaishi}  onMouseEnter={() => {setInterestHovered(6); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
                 Get in touch, <a className={styles.nameDiv}href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'none', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>

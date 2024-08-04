@@ -80,7 +80,7 @@ const LearnPrompting = () => {
             <p className={styles.overviewText}></p>
             <img src={LP1New} className={styles.csImg}></img>
             <h6 class={styles.sectionHeader}>Ongoing Work (WIP)</h6>
-            <p className={styles.overviewText}>Here is some of my ongoing design work.</p>
+            <p className={styles.overviewText}>Currently, I am working on designing Learn Prompting's new LMS (Learning Management System)!</p>
             <img src={LP2} className={styles.csImg}></img>
             <h6 class={styles.sectionHeader}>More Coming Soon</h6>
             <p className={styles.overviewText}>And... that's all! Stay tuned for the finalized case study, and I can't wait to show you what I get to create next! In the meantime, check out where it all started: WebPoint ↓<br></br></p>

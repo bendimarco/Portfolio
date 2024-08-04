@@ -24,7 +24,7 @@ import Flow3 from "./img/flow3.png"
 import PreGen from "./img/pregen.png"
 import PostGen from "./img/postgen.png"
 import Vid from "./img/testvideo.mp4"
-import LB from "./img/lb.png"
+import WB from "./img/wb.png"
 import Footer from "../../Nav/Footer"
 import Resume from "../../../img/BenDiMarcoResume2024.pdf"
 
@@ -214,10 +214,10 @@ const NeverDMCA = () => {
              <iframe playlist="" frameborder="0" src={Vid} className={styles.vid} loop mute></iframe>
             <h6 class={styles.sectionHeader}>Reflections</h6>
             <p className={styles.overviewText}>NeverDMCA was amazing, as it allowed me to experience the entire product design and development process. I was able to experience and execute each step. Following the <a style={{color: "#999CAC"}} target="_blank" href="https://www.thefountaininstitute.com/blog/what-is-the-double-diamond-design-process">Double Diamond Design Process</a>, I was able to complete a competitive analysis, define the problem we wanted our product to solve, develop user personas, ideate on initial designs, conduct user interviews (and collect user usage data), iterate to come to a final design, and ultimately implememnt my design solution.
-            Being able to be so involved in each of these steps taught me so much and made me much more comfortable with each and every one of these steps. Which takes me to where I am now at Learn Prompting!</p>
+            Being able to be so involved in each of these steps taught me so much and made me much more comfortable with each and every one of these steps.</p>
             
-            <p className={styles.overviewText}>Check out Learn Prompting ↓</p>
-            <Link exact to="/learnprompting"><img className={styles.bImg} src={LB}></img></Link>
+            <p className={styles.overviewText}>Check out where it all started, WebPoint ↓</p>
+            <Link exact to="/webpoint"><img className={styles.bImg} src={WB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
                 <a style={{textDecoration: 'none'}} href={Resume} target="_blank" className={styles.footerL}>Resume </a>
