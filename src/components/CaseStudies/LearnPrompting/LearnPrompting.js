@@ -12,7 +12,7 @@ import DS from "./img/lpds.png"
 import WB from "./img/wb.png"
 import OG from "./img/lpog.png"
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume2024.pdf"
+import Resume from "../../../img/BenDiMarcoResume-2024.pdf"
 
     // const [detailActive, setDetailActive] = useState(false);
     // const [detailImg, setDetailImg] = useState(Comp);

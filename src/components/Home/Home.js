@@ -11,7 +11,7 @@ import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
 import ME from "../../img/Ben DiMarco.png"
 import MEsmol from"../../img/mesmol.jpeg"
-import Resume from "../../img/BenDiMarcoResume2024.pdf"
+import Resume from "../../img/BenDiMarcoResume-2024.pdf"
 
 import Footer from '../../components/Nav/Footer';
 import Chihiro from "../../img/chihiro.png";
