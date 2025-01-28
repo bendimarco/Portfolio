@@ -703,9 +703,10 @@
     font-size: 14px;
     margin-bottom: 48px;
     margin-top: 48px;
-    width: 380px;
+    width: 420px;
     font-weight: 300;
     margin-left: max(20vw, calc((100vw - 1200px)/2)); 
+    text-decoration: none;
     /* margin-left: 50%;
     transform: translateX(-50%); */
     justify-content: space-between;
@@ -721,6 +722,7 @@
     text-align: center;
     margin-right: 16px;
     color: #84889988;
+    text-decoration: none;
 }
 
 .footerL:hover {

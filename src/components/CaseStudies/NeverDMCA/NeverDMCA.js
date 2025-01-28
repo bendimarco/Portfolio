@@ -26,7 +26,7 @@ import PostGen from "./img/postgen.png"
 import Vid from "./img/testvideo.mp4"
 import WB from "./img/wb.png"
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume-2024.pdf"
+import Resume from "../../../img/BenDiMarcoResume2025.pdf"
 
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 

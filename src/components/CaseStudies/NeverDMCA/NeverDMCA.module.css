@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-
 .body {
     margin: 0;
     padding: 16px;
@@ -19,19 +18,21 @@
 }
 
 .bannerImg {
+    max-width: 1600px;
     width: 100%;
+    border-radius: 4px;
     height: auto;
     margin-left: 50%;
-    border-radius: 4px;
     transform: translateX(-50%);
 }
 
 .textContainer {
     max-width: 1600px;
     width: 70vw;
+    max-width: 1200px;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: -320px;
+    margin-top: -360px;
     color: #fff;
 }
 
@@ -137,6 +138,7 @@
    transform: scale(1.02);
    transition: 0.2s;
 }
+
 
 .imgSubtext {
     margin-top: -18px;

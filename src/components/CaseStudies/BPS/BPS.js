@@ -11,7 +11,7 @@ import Cards from "./img/cards.png"
 import NB from "./img/nb.png"
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume2024.pdf"
+import Resume from "../../../img/BenDiMarcoResume2025.pdf"
 
 const BPS = () => {
     return (

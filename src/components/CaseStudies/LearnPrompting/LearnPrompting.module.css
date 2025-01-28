@@ -19,20 +19,21 @@
 }
 
 .bannerImg {
+    max-width: 1600px;
     width: 100%;
+    border-radius: 4px;
     height: auto;
     margin-left: 50%;
-    border-radius: 4px;
     transform: translateX(-50%);
 }
 
 .textContainer {
     max-width: 1600px;
     width: 70vw;
+    max-width: 1200px;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: -360px;
-    /* letter-spacing: -0.01em; */
     color: #fff;
 }
 
