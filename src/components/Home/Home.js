@@ -9,7 +9,7 @@ import Blender from "../../img/blender-img.png"
 import LP from "../../img/mementonew.png"
 import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
-import ME from "../../img/Ben DiMarco.png"
+import ME from "../../img/Ben DiMarco3.png"
 import MEsmol from"../../img/mesmol.jpeg"
 import Resume from "../../img/BenDiMarcoResume-2024.pdf"
 
@@ -184,7 +184,8 @@ const Home = () => {
       {numHovers >= 1 ? <div className={styles.spotlight}> </div> : <></>}
       {name ? 
         <div className={styles.me}>
-          {me === 0 ? <img className={styles.meImg} src={ME}></img> : <img className={styles.meImg} src={MEsmol}></img>}
+          {/* {me === 0 ? <img className={styles.meImg} src={ME}></img> : <img className={styles.meImg} src={MEsmol}></img>} */}
+          <img className={styles.meImg} src={ME}></img>
         </div> : <></> }
 
       <div className={styles.interestsContainer}>
@@ -231,16 +232,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className={styles.aboutTextContainer}>
+      <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
             Music, architecture, storytelling, and nature are my artistic and personal inspiration.
           </h2>
           <h2 className={styles.aboutText}>Here are some of my favorites.</h2>
-        </div> */}
+        </div>
 
       <div className={styles.interestsContainer}>
 
-        {/* <div className={styles.inspoTopContainer}>
+        <div className={styles.inspoTopContainer}>
           <div className={styles.vertContainer}>
             <img className={styles.vertImg} src={Chihiro} onMouseEnter={() => {setInterestHovered(0); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
             <img className={styles.vertImg} src={Tadao}   onMouseEnter={() => {setInterestHovered(3); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
@@ -266,7 +267,7 @@ const Home = () => {
               <img className={styles.hisaishiImg} src={Hisaishi}  onMouseEnter={() => {setInterestHovered(6); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.helloText}>
                 Get in touch, <a className={styles.nameDiv}href="mailto:bencdimarco@gmail.com" style={{textDecoration: 'none', cursor: 'pointer', color: '#fff'}}>bencdimarco[at]gmail.com</a>

@@ -199,8 +199,8 @@
     pointer-events: none;
     z-index: 1;
     top: 0;
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 200px;
     position: fixed;
     top: 30px;
     right: 30px;
@@ -452,7 +452,7 @@
 .nameDiv {
     width: auto;
     height: auto;
-    cursor: pointer;
+    cursor: ne-resize;
     background: #191926;
     /* background: linear-gradient(217deg, #19192699, #2f2f4555 70.71%),
             linear-gradient(127deg, #13131dee, #2d2d4899 70.71%),
