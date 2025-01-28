@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f99cbf4.css",
-    "main.js": "/static/js/main.69321555.js",
+    "main.css": "/static/css/main.74dcc07a.css",
+    "main.js": "/static/js/main.dea3a378.js",
     "static/media/testvideo.mp4": "/static/media/testvideo.fdaf75f21ce0d108d6e2.mp4",
     "static/media/mementowork.png": "/static/media/mementowork.2beb80296df5679b24d7.png",
     "static/media/lp1new.png": "/static/media/lp1new.fa9c75b89107e1f4dcc5.png",
@@ -70,7 +70,7 @@
     "static/media/bb.png": "/static/media/bb.5c78ff3400fa9b05ca25.png",
     "static/media/sketch.png": "/static/media/sketch.69ae67f130638c12b3c6.png",
     "static/media/BenDiMarcoResume-2024.pdf": "/static/media/BenDiMarcoResume-2024.ad517ccf4b7ee4bd4358.pdf",
-    "static/media/BenDiMarcoResume2024.pdf": "/static/media/BenDiMarcoResume2024.9611c0fc8d5cda3111e6.pdf",
+    "static/media/BenDiMarcoResume2025.pdf": "/static/media/BenDiMarcoResume2025.0c681a53d859551f175c.pdf",
     "static/media/webpoint-img.png": "/static/media/webpoint-img.0ee55021f27d04126d35.png",
     "static/media/nd6.svg": "/static/media/nd6.b63f5274d39258f12b9a3fd2bb71d084.svg",
     "static/media/nd3.svg": "/static/media/nd3.13711d5f819e72e746e82d7c3f841768.svg",
@@ -82,11 +82,11 @@
     "static/media/nd7.svg": "/static/media/nd7.c084e9ba5e8f95a4eee69c34f816a12e.svg",
     "static/media/home.svg": "/static/media/home.46250771542041fb7e6f38a7cfb8608d.svg",
     "static/media/external.svg": "/static/media/external.4d3dd04947e68dc8f378fec02d8b3915.svg",
-    "main.6f99cbf4.css.map": "/static/css/main.6f99cbf4.css.map",
-    "main.69321555.js.map": "/static/js/main.69321555.js.map"
+    "main.74dcc07a.css.map": "/static/css/main.74dcc07a.css.map",
+    "main.dea3a378.js.map": "/static/js/main.dea3a378.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f99cbf4.css",
-    "static/js/main.69321555.js"
+    "static/css/main.74dcc07a.css",
+    "static/js/main.dea3a378.js"
   ]
 }
