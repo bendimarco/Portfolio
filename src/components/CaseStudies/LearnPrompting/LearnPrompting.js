@@ -79,15 +79,22 @@ const LearnPrompting = () => {
             <p className={styles.sectionTag}>Problem</p>
             <p className={styles.sectionTitle}>Learn Prompting lacked any brand or creative direction and wished to ramp-up growth.</p>
             <p className={styles.overviewText}>When I started working for Learn Prompting, the site was simply a base <a style={{color: "#848899"}}href="https://docusaurus.io/" target="_blank">Docusaurus</a> template.</p>
-            <Suspense fallback={<ImagePlaceholder />}>
+            {/* <Suspense fallback={<ImagePlaceholder />}>
                   <LazyImage
                     src={import("./img/lpog.png")}
                     className={styles.csImg}
                     alt="ASTA"
                   />
-                </Suspense>
+                </Suspense> */}
             <p className={styles.sectionTag}>Solution</p>
             <p className={styles.sectionTitle}>Directed the implementation of brand identity, design systems, and a comprehensive site rebuild.</p>
+            <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("./img/lpmain.png")}
+                    className={styles.csImg}
+                    alt="ASTA"
+                  />
+                </Suspense>
             <p className={styles.overviewText}>
                 
             </p>
@@ -108,6 +115,16 @@ const LearnPrompting = () => {
             <Suspense fallback={<ImagePlaceholder />}>
                   <LazyImage
                     src={import("./img/lp1.png")}
+                    className={styles.csImg}
+                    alt="ASTA"
+                  />
+                </Suspense>
+            <p class={styles.sectionTag}>Works in Progress</p>
+            <h6 class={styles.sectionHeader}>HackAPrompt 2.0 (WIP)</h6>
+            <p className={styles.overviewText}>Full landing page design for the second annual HackAPrompt Competition hosted by Learn Prompting</p>
+            <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("./img/HAP.png")}
                     className={styles.csImg}
                     alt="ASTA"
                   />
@@ -135,7 +152,7 @@ const LearnPrompting = () => {
                     alt="ASTA"
                   />
                 </Suspense>
-            <h6 class={styles.sectionHeader}>Ongoing Work (WIP)</h6>
+            <h6 class={styles.sectionHeader}>LMS (WIP)</h6>
             <p className={styles.overviewText}></p>
             {/* <p className={styles.overviewText}>Currently, I am working on designing Learn Prompting's new LMS (Learning Management System)!</p> */}
             <Suspense fallback={<ImagePlaceholder />}>
@@ -145,6 +162,8 @@ const LearnPrompting = () => {
                     alt="ASTA"
                   />
                 </Suspense>
+                <h6 class={styles.sectionHeader}>Slide Decks (WIP)</h6>
+                <p className={styles.overviewText}></p>
                 <Suspense fallback={<ImagePlaceholder />}>
                   <LazyImage
                     src={import("./img/LP6.png")}
@@ -152,18 +171,11 @@ const LearnPrompting = () => {
                     alt="ASTA"
                   />
                 </Suspense>
+                <h6 class={styles.sectionHeader}>Marketing Materials (WIP)</h6>
+                <p className={styles.overviewText}></p>
                 <Suspense fallback={<ImagePlaceholder />}>
                   <LazyImage
                     src={import("./img/LP5.png")}
-                    className={styles.csImg}
-                    alt="ASTA"
-                  />
-                </Suspense>
-            <h6 class={styles.sectionHeader}>HackAPrompt 2.0</h6>
-            <p className={styles.overviewText}>Full landing page design for the second annual HackAPrompt Competition hosted by Learn Prompting</p>
-            <Suspense fallback={<ImagePlaceholder />}>
-                  <LazyImage
-                    src={import("./img/HAP.png")}
                     className={styles.csImg}
                     alt="ASTA"
                   />
