@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import React from "react";
+import { useRef } from "react";
 
 import Memento from "../../img/lpnew2.png"
 import LPMobile from "../../img/lpmobile.png"
@@ -32,9 +32,9 @@ import { Suspense, lazy } from 'react';
 
 let projects = [
   {title:'Memento', desc:"First NFT marketplace to allow checkout with credit card and direct minting to ethereum wallets.", start:'Oct 2021', end:'Apr 2022', role:'Co-Founder / Lead Designer'},
-  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug 2022', role:'UI/UX Designer / Front-end Eng.'},
-  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr 2023', end:'Present', role:'Lead Designer / Front-end Eng.'},
-  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun 2023', end:'Aug 2023', role:'Lead Designer / Front-end Eng.'},
+  {title:'BPS ASTA', desc:"Web app testing agent that performs completely autonomous functional testing of enterprise applications.", start:'May 2022', end:'Aug 2022', role:'UI/UX Designer / Design Eng.'},
+  {title:'Learn Prompting', desc:"The largest beginner friendly guide and educational resource for the field of prompt engineering.", start:'Apr 2023', end:'Present', role:'Lead Designer / Design Eng.'},
+  {title:'NeverDMCA', desc:"Generative AI model that allows content creators to create unique, fully customized music for their videos, 100% copyright free.", start:'Jun 2023', end:'Aug 2023', role:'Lead Designer / Design Eng.'},
   {title:'WebPoint', desc:"Volunteer organization that created websites for local businesses, and gave students web development experience.", start:'Mar 2020', end:'Aug 2021', role:'Co-Founder / Lead Designer'}];
 
 let projectsAlt = [
@@ -58,10 +58,35 @@ let viewportWidth = window.innerWidth;
 
 const Home = () => {
 
-  document.addEventListener('mousemove', function(ev){
-    document.getElementById('cursor').style.transform = 'translateY('+(ev.clientY+30)+'px)';
-    document.getElementById('cursor').style.transform += 'translateX('+(ev.clientX-120)+'px)';            
-},false);
+  const cursorRef = useRef(null);
+  const animationFrameRef = useRef();
+
+  useEffect(() => {
+    const handleMouseMove = (ev) => {
+      // Cancel existing animation frame if it exists
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+
+      // Schedule new position update
+      animationFrameRef.current = requestAnimationFrame(() => {
+        if (cursorRef.current) {
+          // Use translate3d for hardware acceleration
+          cursorRef.current.style.transform = `translate3d(${ev.clientX - 120}px, ${ev.clientY + 30}px, 0)`;
+        }
+      });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, []);
 
   const [currentTrack, setCurrentTrack] = useState(null);
   const [lastTrack, setLastTrack] = useState(null);
@@ -109,7 +134,8 @@ const Home = () => {
   return (
     <div 
       className={[styles.page].join(' ')}>
-      <div id="cursor" className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} >
+      {/* <div id="cursor" className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} > */}
+      <div ref={cursorRef} className={hoveringProj || hoveringProjAlt || hoveringInterest ? [styles.cursor, styles.cursorvisible].join(' ') : styles.cursor} >
       {hoveringProj ? 
       <>
         <p className={styles.hoverProjName}>{projects[projHovered].title}</p>
@@ -189,11 +215,11 @@ const Home = () => {
         </div> : <></> }
 
       <div className={styles.interestsContainer}>
-        {/* <div className={styles.mementoImgContainer}>
+        <div className={styles.mementoImgContainer}>
           <Link exact to="/learnprompting">
             <img className={styles.mementoImg} src={Memento} onMouseEnter={() => {setProjHovered(2); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img> 
           </Link>
-        </div> */}
+        </div>
         <div className={styles.flex} >
           <div className={styles.workLeftContainer}>
             <div className={styles.workImgContainer}>

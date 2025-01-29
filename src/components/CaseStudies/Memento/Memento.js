@@ -1,5 +1,11 @@
 import React from 'react'
 import Banner from './img/MementoBanner.png'
+import One from './img/memento1.png'
+import Two from './img/memento2.png'
+// import Three from './img/memento3.png'
+import Four from './img/memento4.png'
+import Five from './img/memento5.png'
+import Six from './img/memento6.png'
 import BB from "./img/bb.png"
 import styles from "./Memento.module.css";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
@@ -36,7 +42,29 @@ const Memento = () => {
             </div>
             <div className={styles.divider}></div>
             {/* Project Overview */}
+            <p className={styles.sectionTag}>Problem</p>
+            <p className={styles.sectionTitle}>NFTs were expensive and difficult to buy.</p>
             <p className={styles.overviewText}>
+
+            </p>
+            <p className={styles.sectionTag}>Solution</p>
+            <p className={styles.sectionTitle}>Memento was an NFT marketplace with lower fees, lower prices, and credit card checkout.</p>
+            <p className={styles.overviewText}>
+              Through direct minting via smart-contract and avoiding ETH transaction fees, we were able to support low lost and highly accessible NFT purchases, helping democratize the space.
+            </p>
+            <img className={styles.csImg} src={One}></img>
+            <p className={styles.sectionTag}>Result</p>
+            <p className={styles.sectionTitle}>Partnered with the UMD Mens Basketball Team<br/>
+            Accepted into UMD's Blockchain Accelerator</p>
+            <p className={styles.overviewText}>
+              Launched official NFTs for the Maryland Men's Basketball Team where 80% of proceeds went directly to the players. Then was accepted into the inagural cohort of UMD's Blockchain Accelerator.
+            </p>
+            {/* <img className={styles.csImg} src={Six}></img>
+            <img className={styles.csImg} src={Five}></img> */}
+            <img className={styles.csImg} src={Two}></img>
+            {/* <img className={styles.csImg} src={Three}></img> */}
+            <img className={styles.csImg} src={Four}></img>
+            {/* <p className={styles.overviewText}>
             In my freshman semester at the University of Maryland College Park, I got to work alongside two seniors to build a company that would go on to partner with the University of Maryland Athletics department, and became the only student-created company to be accepted into the inaugural cohort of the <a style={{color: 'white'}}target="_blank" href="https://www.rhsmith.umd.edu/centers-initiatives/supply-chain-management-center/initiatives-programs/blockchain-accelerator">University of Maryland’s Blockchain Accelerator</a>.
             </p>
             <p className={styles.overviewText}> After moving into college, I felt sort of lost. I didn't know many people, and I no longer had WebPoint to create stuff with other people. Luckily, after a chance meeting, I became really close with Ian, the Co-Exec of <a style={{color: 'white'}} href="https://startupshell.org/" target="_blank">Startup Shell</a>, UMD's entrepaneurship club and incubator. This would become my home away from home. It was during a Startup Shell hackathon with him that Memento would be born, from a product demo to a fully fledged platform.
@@ -58,7 +86,7 @@ const Memento = () => {
             <p className={styles.overviewText}>As I was a full-time student taking 17 credits and was working in an extremely fast-paced way to keep up, a lot of my work was lost to time. I would mostly design directly in HTML and CSS, so I dont have too many artifacts left :(</p>
             <h6 class={styles.sectionHeader}>Reflections</h6>
             <p className={styles.overviewText}>Memento was my first foray into the world of entrepaneurship and the process of building a real product from scratch. It was amazing to see our product come to life and work with so many amazing people in the process.</p>
-            <p className={styles.overviewText}>However, I wished that I went into Memento with a more solid understanding of design processes and methods. Memento was a chaotic whirlwind of fun and building, but I knew I could have done so much more if I took time to priotorize my process. And this is exactly what I focused on in my next design project for Business Performance Systems, ASTA!</p>
+            <p className={styles.overviewText}>However, I wished that I went into Memento with a more solid understanding of design processes and methods. Memento was a chaotic whirlwind of fun and building, but I knew I could have done so much more if I took time to priotorize my process. And this is exactly what I focused on in my next design project for Business Performance Systems, ASTA!</p> */}
             <p className={styles.overviewText}>Check out ASTA ↓</p>
             <Link exact to="/bps"><img className={styles.bImg} src={BB}></img></Link>
             <div className={styles.footerText}>

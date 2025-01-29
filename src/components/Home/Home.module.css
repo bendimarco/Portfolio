@@ -56,6 +56,10 @@
     transition: 0.2s; /* Sticking effect */
     transition-timing-function: ease-out;
     pointer-events: none; /* Allow clicking trough the div */
+
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
 } 
 
 .cursorvisible {

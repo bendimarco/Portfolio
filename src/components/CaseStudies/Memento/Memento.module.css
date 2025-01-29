@@ -9,6 +9,24 @@
     overflow-x: hidden;
 }
 
+.sectionTag {
+    font-size: 16px;
+    color: #4F89FF;
+    font-weight: 400;
+    margin-bottom: -0px;
+}
+
+.sectionTitle {
+    font-size: 32px;
+    color: #FFF;
+    font-weight: 500;
+    max-width: 1600px;
+    width: 70vw;
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 .bannerImg {
     max-width: 1600px;
     width: 100%;
@@ -66,7 +84,7 @@
     margin-bottom: 36px;
     height: 1px;
     width: 100%;
-    background: #8D91A8;
+    background: #8D91A855;
 }
 
 .overviewText {

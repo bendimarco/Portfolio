@@ -9,6 +9,25 @@
     overflow-x: hidden;
 }
 
+.sectionTag {
+    font-size: 16px;
+    color: #4F89FF;
+    font-weight: 400;
+    margin-bottom: -0px;
+}
+
+.sectionTitle {
+    font-size: 32px;
+    color: #172B4D;
+    font-weight: 500;
+    max-width: 1600px;
+    width: 70vw;
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
 .bannerImg {
     max-width: 1600px;
     width: 100%;
