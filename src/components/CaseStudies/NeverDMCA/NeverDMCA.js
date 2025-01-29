@@ -24,7 +24,7 @@ import Flow3 from "./img/flow3.png"
 import PreGen from "./img/pregen.png"
 import PostGen from "./img/postgen.png"
 import Vid from "./img/testvideo.mp4"
-import WB from "./img/wb.png"
+import WB from "./img/lp.png"
 import Footer from "../../Nav/Footer"
 import Resume from "../../../img/BenDiMarcoResume2025.pdf"
 
@@ -240,8 +240,8 @@ const NeverDMCA = () => {
              */}
              {/* <p className={styles.sectionTag}>Reflection</p> */}
              {/* <p className={styles.sectionTitle}>500+ MAUs and partnership with Woody and Kleiny (15M YouTube)</p> */}
-            <p className={styles.overviewText}>Check out where it all started, WebPoint ↓</p>
-            <Link exact to="/webpoint"><img className={styles.bImg} src={WB}></img></Link>
+            <p className={styles.overviewText}>Check out my current work at Learn Prompting ↓</p>
+            <Link exact to="/learnprompting"><img className={styles.bImg} src={WB}></img></Link>
             <div className={styles.footerText}>
                 <div className={styles.footerC}>© {new Date().getFullYear()} Ben DiMarco</div>
                 <a style={{textDecoration: 'none'}} href={Resume} target="_blank" className={styles.footerL}>Resume </a>

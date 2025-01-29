@@ -74,7 +74,7 @@ const LearnPrompting = () => {
                <p className={styles.sectionTag}>Overview</p>
              <p className={styles.sectionTitle}>The first non-founder employee for the world's largest LLM and Prompt Engineering Resource.</p>
              <p className={styles.overviewText}>
-                Recruited by Sander Schullhoff, NLP/DRL researcher and CEO of Learn Promtping, to act as a growth-focused Design Engineer.
+                Recruited by Sander Schullhoff, NLP/DRL researcher and CEO of Learn Promtping, to act as a growth Design Engineer.
             </p>
             <p className={styles.sectionTag}>Problem</p>
             <p className={styles.sectionTitle}>Learn Prompting lacked any brand or creative direction and wished to ramp-up growth.</p>

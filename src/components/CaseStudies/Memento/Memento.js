@@ -54,8 +54,8 @@ const Memento = () => {
             </p>
             <img className={styles.csImg} src={One}></img>
             <p className={styles.sectionTag}>Result</p>
-            <p className={styles.sectionTitle}>Partnered with the UMD Mens Basketball Team<br/>
-            Accepted into UMD's Blockchain Accelerator</p>
+            <p className={styles.sectionTitle}>Partnered with the UMD Mens Basketball Team.<br/>
+            Accepted into UMD's Blockchain Accelerator.</p>
             <p className={styles.overviewText}>
               Launched official NFTs for the Maryland Men's Basketball Team where 80% of proceeds went directly to the players. Then was accepted into the inagural cohort of UMD's Blockchain Accelerator.
             </p>
