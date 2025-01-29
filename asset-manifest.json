@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d37c5600.css",
-    "main.js": "/static/js/main.4002e5ac.js",
+    "main.css": "/static/css/main.47f3c121.css",
+    "main.js": "/static/js/main.8b1aa953.js",
     "static/js/402.4d345f39.chunk.js": "/static/js/402.4d345f39.chunk.js",
     "static/js/967.36005dce.chunk.js": "/static/js/967.36005dce.chunk.js",
     "static/js/394.1a1d0a9d.chunk.js": "/static/js/394.1a1d0a9d.chunk.js",
@@ -71,6 +71,7 @@
     "static/media/flow3.png": "/static/media/flow3.7c54ab5c9f912cf80e70.png",
     "static/media/up.png": "/static/media/up.7d05fed40baf2ef74a38.png",
     "static/media/mb.png": "/static/media/mb.07e88d081d0cd7db0463.png",
+    "static/media/lp.png": "/static/media/lp.86d39f82a4deec410f21.png",
     "static/media/flow2.png": "/static/media/flow2.ad37ac399454d6710735.png",
     "static/media/memento5.png": "/static/media/memento5.da76129d57caaa79c788.png",
     "static/media/Ben DiMarco3.png": "/static/media/Ben DiMarco3.974e335840294a0f249a.png",
@@ -98,13 +99,13 @@
     "static/media/nd7.svg": "/static/media/nd7.c084e9ba5e8f95a4eee69c34f816a12e.svg",
     "static/media/home.svg": "/static/media/home.46250771542041fb7e6f38a7cfb8608d.svg",
     "static/media/external.svg": "/static/media/external.4d3dd04947e68dc8f378fec02d8b3915.svg",
-    "main.d37c5600.css.map": "/static/css/main.d37c5600.css.map",
-    "main.4002e5ac.js.map": "/static/js/main.4002e5ac.js.map",
+    "main.47f3c121.css.map": "/static/css/main.47f3c121.css.map",
+    "main.8b1aa953.js.map": "/static/js/main.8b1aa953.js.map",
     "402.4d345f39.chunk.js.map": "/static/js/402.4d345f39.chunk.js.map",
     "967.36005dce.chunk.js.map": "/static/js/967.36005dce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d37c5600.css",
-    "static/js/main.4002e5ac.js"
+    "static/css/main.47f3c121.css",
+    "static/js/main.8b1aa953.js"
   ]
 }
