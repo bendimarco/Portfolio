@@ -196,7 +196,7 @@ const Home = () => {
         </div>
           <h1 className={styles.helloText}>Hi, I'm <span style={{color: 'white'}} onClick={() => {me === 1 ? setMe(0) : setMe(1)}} className={styles.nameDiv} onMouseEnter={() => {setName(true)}} onMouseLeave={() => {setName(false)}}>
             Ben DiMarco
-            </span>, a computer science student and aspiring design engineer specializing in visual design.</h1>
+            </span>, a computer science student and aspiring design engineer.</h1>
         {/* <h1 className={styles.helloText}>Hi, I'm Ben DiMarco, a computer science student and UI/UX designer in training. <br></br><span style={{fontWeight: '300'}}>I love what I do.</span></h1> */}
         <h2 className={styles.studentText}>
           I like to reduce interfaces to their essentials, designing with a focus on simplicity.
