@@ -1,7 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.d37c5600.css",
-    "main.js": "/static/js/main.5d36436d.js",
+    "main.js": "/static/js/main.4002e5ac.js",
+    "static/js/402.4d345f39.chunk.js": "/static/js/402.4d345f39.chunk.js",
+    "static/js/967.36005dce.chunk.js": "/static/js/967.36005dce.chunk.js",
+    "static/js/394.1a1d0a9d.chunk.js": "/static/js/394.1a1d0a9d.chunk.js",
+    "static/js/522.782fabd5.chunk.js": "/static/js/522.782fabd5.chunk.js",
     "static/media/testvideo.mp4": "/static/media/testvideo.fdaf75f21ce0d108d6e2.mp4",
     "static/media/mementowork.png": "/static/media/mementowork.2beb80296df5679b24d7.png",
     "static/media/lp1new.png": "/static/media/lp1new.fa9c75b89107e1f4dcc5.png",
@@ -33,6 +37,7 @@
     "static/media/lpnew2.png": "/static/media/lpnew2.fce4ae088bc5f4bf85c6.png",
     "static/media/blender.png": "/static/media/blender.36db88a94c5748aad055.png",
     "static/media/memento1.png": "/static/media/memento1.ae836c42e6bcf82c3472.png",
+    "static/media/deathsdoor.png": "/static/media/deathsdoor.0c82c9808f900e0afecb.png",
     "static/media/hallo.png": "/static/media/hallo.63a99c8c89849c30d9aa.png",
     "static/media/model3.png": "/static/media/model3.57d6f4c448506b6ab26b.png",
     "static/media/dd2.png": "/static/media/dd2.009d2caa636e7eb2509e.png",
@@ -94,10 +99,12 @@
     "static/media/home.svg": "/static/media/home.46250771542041fb7e6f38a7cfb8608d.svg",
     "static/media/external.svg": "/static/media/external.4d3dd04947e68dc8f378fec02d8b3915.svg",
     "main.d37c5600.css.map": "/static/css/main.d37c5600.css.map",
-    "main.5d36436d.js.map": "/static/js/main.5d36436d.js.map"
+    "main.4002e5ac.js.map": "/static/js/main.4002e5ac.js.map",
+    "402.4d345f39.chunk.js.map": "/static/js/402.4d345f39.chunk.js.map",
+    "967.36005dce.chunk.js.map": "/static/js/967.36005dce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d37c5600.css",
-    "static/js/main.5d36436d.js"
+    "static/js/main.4002e5ac.js"
   ]
 }

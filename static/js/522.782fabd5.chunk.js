@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio2=self.webpackChunkportfolio2||[]).push([[522],{8522:(e,o,p)=>{e.exports=p.p+"static/media/deathsdoor.0c82c9808f900e0afecb.png"}}]);

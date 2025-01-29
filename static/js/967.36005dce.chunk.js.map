@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/967.36005dce.chunk.js","mappings":"2JAAO,MAAMA,EAAmB,KAC5B,0BACE,gBAAKC,UAAU,6C","sources":["components/ImagePlaceholder.js"],"sourcesContent":["export const ImagePlaceholder = () => (\n    <div>\n      <div className=\"animate-pulse bg-gray-200 w-full h-full\" />\n    </div>\n  );\n  "],"names":["ImagePlaceholder","className"],"sourceRoot":""}
