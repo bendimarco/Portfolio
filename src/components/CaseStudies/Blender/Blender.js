@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Hallo from "./img/hallo.png" 
 import Kiki from "./img/kiki.png" 
 import Tina from "./img/tina.png" 
-import Resume from "../../../img/BenDiMarcoResume-2024.pdf"
+import Resume from "../../../img/BenDiMarcoResume-2025.pdf"
 
 
 const Memento = () => {

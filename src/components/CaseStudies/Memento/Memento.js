@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 import Work from "./img/mementowork.png"
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume2025.pdf"
+import Resume from "../../../img/BenDiMarcoResume-2025.pdf"
 
 const Memento = () => {
     return (
@@ -44,9 +44,7 @@ const Memento = () => {
             {/* Project Overview */}
             <p className={styles.sectionTag}>Problem</p>
             <p className={styles.sectionTitle}>NFTs were expensive and difficult to buy.</p>
-            <p className={styles.overviewText}>
-
-            </p>
+            <p className={styles.overviewText}>Purchasing an NFT required transfering funds into you ETH wallet, purchasing through your digital wallet, and paying transaction fees each step of the way.</p>
             <p className={styles.sectionTag}>Solution</p>
             <p className={styles.sectionTitle}>Memento was an NFT marketplace with lower fees, lower prices, and credit card checkout.</p>
             <p className={styles.overviewText}>

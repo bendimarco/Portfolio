@@ -10,7 +10,7 @@ import NeverDMCA from "../../img/ndmca-img.png"
 import Misc from "../../img/misc-img.png"
 import ME from "../../img/Ben DiMarco3.png"
 import MEsmol from"../../img/mesmol.jpeg"
-import Resume from "../../img/BenDiMarcoResume2025.pdf"
+import Resume from "../../img/BenDiMarcoResume-2025.pdf"
 
 import Footer from '../../components/Nav/Footer';
 import Chihiro from "../../img/chihiro.png";

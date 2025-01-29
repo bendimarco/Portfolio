@@ -13,7 +13,7 @@ import SISC from "./img/sisc.png"
 import MB from "./img/mb.png"
 import External from "./img/external.svg"
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume2025.pdf"
+import Resume from "../../../img/BenDiMarcoResume-2025.pdf"
 
 const Memento = () => {
     return (

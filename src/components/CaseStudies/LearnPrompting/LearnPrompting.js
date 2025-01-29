@@ -17,7 +17,7 @@ import WB from "./img/wb.png"
 import OG from "./img/lpog.png"
 import HAP from "./img/HAP.png"
 import Footer from "../../Nav/Footer"
-import Resume from "../../../img/BenDiMarcoResume2025.pdf"
+import Resume from "../../../img/BenDiMarcoResume-2025.pdf"
 const LazyImage = lazy(() => import('../../LazyImage'));
 const ImagePlaceholder= lazy(() => import('../../ImagePlaceholder'));
 
