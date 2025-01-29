@@ -71,14 +71,14 @@ const LearnPrompting = () => {
             <p className={styles.overviewText}>
                 During the summer of 2023, I worked alongside two software engineers to build, design, and creatively lead NeverDMCA, an AI music generation platform that would go on to partner with <a style={{color: "#999CAC"}} target="_blank" href="https://www.youtube.com/@woodyandkleiny">Woody and Kleiny</a>
             </p> */}
-               <p className={styles.sectionTag}>Overview</p>
+               {/* <p className={styles.sectionTag}>Overview</p>
              <p className={styles.sectionTitle}>The first non-founder employee for the world's largest LLM and Prompt Engineering Resource.</p>
              <p className={styles.overviewText}>
                 Recruited by Sander Schullhoff, NLP/DRL researcher and CEO of Learn Promtping, to act as a growth Design Engineer.
-            </p>
+            </p> */}
             <p className={styles.sectionTag}>Problem</p>
             <p className={styles.sectionTitle}>Learn Prompting lacked any brand or creative direction and wished to ramp-up growth.</p>
-            <p className={styles.overviewText}>When I started working for Learn Prompting, the site was simply a base <a style={{color: "#848899"}}href="https://docusaurus.io/" target="_blank">Docusaurus</a> template.</p>
+            <p className={styles.overviewText}>I was recruited by Sander Schullhoff, NLP/DRL researcher and CEO of Learn Promtping, to act as a growth Design Engineer and their first external hire. When I started working for Learn Prompting, the site was simply a base <a style={{color: "#848899"}}href="https://docusaurus.io/" target="_blank">Docusaurus</a> template.</p>
             {/* <Suspense fallback={<ImagePlaceholder />}>
                   <LazyImage
                     src={import("./img/lpog.png")}
