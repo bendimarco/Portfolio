@@ -771,7 +771,7 @@
 
 @media (max-width: 1250px) {
     .meImg {
-        width: 150px;
+        height: 150px;
         /* animation: fadein;
         animation-duration: 0.2s; */
     }
@@ -816,7 +816,7 @@
     }
 
     .meImg {
-        width: 120px;
+        height: 120px;
         /* animation: fadein;
         animation-duration: 0.2s; */
     }
