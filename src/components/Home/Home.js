@@ -1,7 +1,6 @@
 import styles from "./Home.module.css";
-import { useRef } from "react";
+import { useRef, useState, useEffect, Suspense, lazy  } from "react";
 
-import Memento from "../../img/lpnew2.png"
 import LPMobile from "../../img/lpmobile.png"
 import ASTA from "../../img/asta-img2.png"
 import WebPoint from "../../img/webpoint-img.png"
@@ -22,10 +21,10 @@ import Chamath from "../../img/chamath.png";
 import DeathsDoor from "../../img/dd2.png";
 import Joji from "../../img/wes2.png";
 import Hisaishi from "../../img/hisaishi.png";
-import { useState, useEffect } from "react";
 import useMousePosition from "../Hooks/UseMousePosition"
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+const LazyImage = lazy(() => import('../LazyImage'));
+const ImagePlaceholder= lazy(() => import('../ImagePlaceholder'));
 // import NDMCA from "../CaseStudies/NeverDMCA/NeverDMCA"
 // import MementoCS from "../CaseStudies/Memento/Memento"
 // import BPS from "../CaseStudies/BPS/BPS"
@@ -53,8 +52,6 @@ let interests = [
 
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
-
-
 
 const Home = () => {
 
@@ -211,47 +208,137 @@ const Home = () => {
       {name ? 
         <div className={styles.me}>
           {/* {me === 0 ? <img className={styles.meImg} src={ME}></img> : <img className={styles.meImg} src={MEsmol}></img>} */}
-          <img className={styles.meImg} src={ME}></img>
+          <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/Ben DiMarco3.png")}
+                    className={styles.meImg}
+                    alt="Image of Me"
+                  />
+                </Suspense>
         </div> : <></> }
 
       <div className={styles.interestsContainer}>
         <div className={styles.mementoImgContainer}>
           <Link exact to="/learnprompting">
-            <img className={styles.mementoImg} src={Memento} onMouseEnter={() => {setProjHovered(2); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img> 
+            <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/lpnew2.png")}
+                    className={styles.mementoImg}
+                    onMouseEnter={() => {
+                      setProjHovered(2);
+                      setHoveringProj(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProj(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
           </Link>
         </div>
         <div className={styles.flex} >
           <div className={styles.workLeftContainer}>
             <div className={styles.workImgContainer}>
               <Link exact to="/bps">
-                <img className={styles.astaImg} src={ASTA} onMouseEnter={() => {setProjHovered(1); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/asta-img2.png")}
+                    className={styles.astaImg}
+                    onMouseEnter={() => {
+                      setProjHovered(1);
+                      setHoveringProj(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProj(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </Link>
             </div>
             <div className={styles.workImgContainer}>
               <Link exact to="/webpoint">
-              <img className={styles.webpointImg} src={WebPoint} onMouseEnter={() => {setProjHovered(4); setHoveringProj(true)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/webpoint-img.png")}
+                    className={styles.webpointImg}
+                    onMouseEnter={() => {
+                      setProjHovered(4);
+                      setHoveringProj(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProj(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </Link>
             </div>
             <div className={styles.workImgContainer}>
               <Link exact to="/3d">
-              <img className={styles.blenderImg} src={Blender} onMouseEnter={() => {setProjAltHovered(0); setHoveringProjAlt(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/blender-img.png")}
+                    className={styles.blenderImg}
+                    onMouseEnter={() => {
+                      setProjAltHovered(0);
+                      setHoveringProjAlt(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProjAlt(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </Link>
             </div>
           </div>
           <div className={styles.workRightContainer}>
           <div className={styles.workImgContainer}>
               <Link exact to="/neverdmca">
-                <img className={styles.blenderImg} src={NeverDMCA} onMouseEnter={() => {setProjHovered(3); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/ndmca-img.png")}
+                    className={styles.blenderImg}
+                    onMouseEnter={() => {
+                      setProjHovered(3);
+                      setHoveringProj(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProj(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </Link>
             </div>
             <div className={styles.workImgContainer}>
               <Link exact to="/memento">
-                <img className={styles.lpImg} src={LP} onMouseEnter={() => {setProjHovered(0); setHoveringProj(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProj(false);}}></img>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/mementonew.png")}
+                    className={styles.lpImg}
+                    onMouseEnter={() => {
+                      setProjHovered(0);
+                      setHoveringProj(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProj(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </Link>
             </div>
             <a target="_blank" href="https://dribbble.com/bendimarco">
             <div className={styles.workImgContainer}>
-              <img className={styles.miscImg} src={Misc} onMouseEnter={() => {setProjAltHovered(1); setHoveringProjAlt(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringProjAlt(false);}}></img>
+            <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/misc-img.png")}
+                    className={styles.miscImg}
+                    onMouseEnter={() => {
+                      setProjAltHovered(1);
+                      setHoveringProjAlt(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringProjAlt(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
             </div>
             </a>
           </div>
@@ -269,28 +356,124 @@ const Home = () => {
 
         <div className={styles.inspoTopContainer}>
           <div className={styles.vertContainer}>
-            <img className={styles.vertImg} src={Chihiro} onMouseEnter={() => {setInterestHovered(0); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-            <img className={styles.vertImg} src={Tadao}   onMouseEnter={() => {setInterestHovered(3); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-            <img className={styles.vertImg} src={Tyler}  onMouseEnter={() => {setInterestHovered(7); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+          <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/chihiro.png")}
+                    className={styles.vertImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(0);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
+                <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/tadao.png")}
+                    className={styles.vertImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(3);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
+                <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/tyler.png")}
+                    className={styles.vertImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(7);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
           </div>
 
           <div className={styles.horizContainer}>
             <div className={styles.threeContainer}>
               <div className={styles.yuvalImgContainer}>
-                <img className={styles.yuvalImg} src={Yuval} onMouseEnter={() => {setInterestHovered(1); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+              <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/yuval.png")}
+                    className={styles.yuvalImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(1);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
               </div>
               <div className={styles.threeSideConatiner}>
                 <div className={styles.chamathImgContainer}>
-                  <img className={styles.chamathImg} src={Chamath} onMouseEnter={() => {setInterestHovered(2); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+                <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/chamath.png")}
+                    className={styles.chamathImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(2);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
                 </div>
                 <div className={styles.ddImgContainer}>
-                  <img className={styles.ddImg} src={DeathsDoor}  onMouseEnter={() => {setInterestHovered(4); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+                <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/deathsdoor.png")}
+                    className={styles.ddImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(4);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
                 </div>
               </div>
             </div>
             <div className={styles.twoContainer}>
-              <img className={styles.jojiImg} src={Joji}  onMouseEnter={() => {setInterestHovered(5); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
-              <img className={styles.hisaishiImg} src={Hisaishi}  onMouseEnter={() => {setInterestHovered(6); setHoveringInterest(true); setNumHovers(numHovers+1)}} onMouseLeave={() => {setHoveringInterest(false);}}/>
+            <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/wes2.png")}
+                    className={styles.jojiImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(5);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
+                <Suspense fallback={<ImagePlaceholder />}>
+                  <LazyImage
+                    src={import("../../img/hisaishi.png")}
+                    className={styles.hisaishiImg}
+                    onMouseEnter={() => {
+                      setInterestHovered(6);
+                      setHoveringInterest(true);
+                      setNumHovers(numHovers + 1);
+                    }}
+                    onMouseLeave={() => setHoveringInterest(false)}
+                    alt="ASTA"
+                  />
+                </Suspense>
             </div>
           </div>
         </div>
