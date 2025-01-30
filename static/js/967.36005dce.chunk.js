@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio2=self.webpackChunkportfolio2||[]).push([[967],{1967:(l,e,s)=>{s.r(e),s.d(e,{ImagePlaceholder:()=>o});var a=s(184);const o=()=>(0,a.jsx)("div",{children:(0,a.jsx)("div",{className:"animate-pulse bg-gray-200 w-full h-full"})})}}]);
-//# sourceMappingURL=967.36005dce.chunk.js.map
